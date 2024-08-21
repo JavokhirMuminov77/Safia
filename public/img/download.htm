@@ -1,0 +1,3429 @@
+<!DOCTYPE html>
+<html lang="en-US" class="group/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="https://www.francisfordcoppolawinery.com/xmlrpc.php">
+    
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NWBRKMPV');</script>
+        <!-- End Google Tag Manager -->
+    
+    <!-- TOCK Widget -->
+    <script>
+    !function(t,o,c,k){if(!t.tock){var e=t.tock=function(){e.callMethod?
+    e.callMethod.apply(e,arguments):e.queue.push(arguments)};t._tock||(t._tock=e),
+    e.push=e,e.loaded=!0,e.version='1.0',e.queue=[];var f=o.createElement(c);f.async=!0,
+    f.src=k;var g=o.getElementsByTagName(c)[0];g.parentNode.insertBefore(f,g)}}(
+    window,document,'script','https://www.exploretock.com/tock.js');
+
+    tock('init', 'francisfordcoppolawinery');
+    </script>
+    
+		<script id="rc-script" src="https://www.reservecloud.com/scripts/portals/rcPortal.js" rc-target="guestLists" type="text/javascript" defer="defer"></script>    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<script type="text/javascript">
+    (function() {
+  var pvData = {"source":"https:\/\/www.google.com\/","referrer":"https:\/\/www.google.com\/","visitor_type":"logged out","visitor_login_status":"logged out","visitor_id":0,"page_title":"Sofia Ros\u00e9 | Francis Ford Coppola Winery","post_type":"product","post_type_with_prefix":"single product","post_categories":"","post_tags":"","post_author":"ftcheyenne","post_full_date":"July 26, 2023","post_year":"2023","post_month":"07","post_day":"26","is_front_page":0,"is_home":1,"search_query":"","search_results_count":0};
+  var body = {
+    url: encodeURIComponent(window.location.href),
+    referrer: encodeURIComponent(document.referrer)
+  };
+
+  function makePostRequest(e,t){var n=[];if(t.body){for(var o in t.body)n.push(encodeURIComponent(o)+"="+encodeURIComponent(t.body[o]));t.body=n.join("&")}return window.fetch?new Promise(n=>{var o={method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},redirect:"follow",body:{},...t};window.fetch(e,o).then(e=>{n(e.text())})}):new Promise(t=>{var o;"undefined"==typeof XMLHttpRequest&&t(null),(o=new XMLHttpRequest).open("POST",e,!0),o.onreadystatechange=function(){4==o.readyState&&200==o.status&&t(o.responseText)},o.setRequestHeader("Content-type","application/x-www-form-urlencoded"),o.send(n.join("&"))})}
+  function observeAjaxCartActions(e){new PerformanceObserver(function(t){for(var n=t.getEntries(),r=0;r<n.length;r++)["xmlhttprequest","fetch"].includes(n[r].initiatorType)&&['=get_refreshed_fragments', 'add_to_cart'].some(p => n[r].name.includes(p))&&fetchCart(e)}).observe({entryTypes:["resource"]})};
+
+  function fetchCart(adapter) {
+    makePostRequest("//www.francisfordcoppolawinery.com/index.php?plugin=optimonk&action=cartData", { body })
+      .then((response) => {
+        var data = JSON.parse(response);
+        setCartData(data, adapter);
+      })
+  }
+
+  function setCartData(cartData, adapter) {
+    adapter.Cart.clear();
+
+    cartData.cart.forEach(cartItem => {
+      adapter.Cart.add(cartItem.sku, {quantity: cartItem.quantity, price: cartItem.price, name: cartItem.name});
+    });
+    Object.keys(cartData.avs).forEach((key, value) => {
+      adapter.attr(`wp_${key}`, cartData.avs[key]);
+    })
+  }
+
+  function setAssocData(assocData, adapter) {
+    Object.keys(assocData).forEach((key) => {
+      adapter.attr(`wp_${key}`, assocData[key]);
+    })
+  }
+
+  var RuleHandler = {
+    hasVisitorCartRules: (campaignMeta) => {
+      return !!(campaignMeta.rules.visitorCart || campaignMeta.rules.visitorCartRevamp);
+    },
+    hasVisitorAttributeRule: (campaignMeta) => {
+      return !!campaignMeta.rules.visitorAttribute;
+    }
+  }
+
+  document.querySelector('html').addEventListener('optimonk#embedded-campaigns-init', function(e) {
+    var campaignsData = e.parameters;
+
+    if (!campaignsData.length) {
+      return;
+    }
+
+    var adapter = window.OptiMonkEmbedded.Visitor.createAdapter();
+    var hasCartRule = false;
+    var hasAttributeRule = false;
+
+    campaignsData.forEach((campaignMetaData) => {
+      hasCartRule = hasCartRule || RuleHandler.hasVisitorCartRules(campaignMetaData);
+      hasAttributeRule = hasAttributeRule || RuleHandler.hasVisitorAttributeRule(campaignMetaData);
+    });
+
+    setAssocData(pvData, adapter);
+
+    if (hasCartRule) {
+      observeAjaxCartActions(adapter);
+      fetchCart(adapter);
+    }
+
+    if (hasAttributeRule) {
+      makePostRequest("//www.francisfordcoppolawinery.com/index.php?plugin=optimonk&action=productData", { body })
+        .then((response) => {
+          var data = JSON.parse(response);
+          setAssocData(data, adapter);
+        })
+    }
+  });
+
+  document.querySelector('html').addEventListener('optimonk#campaigns_initialized', function () {
+    if (!OptiMonk.campaigns) {
+      return;
+    }
+
+    var adapter = window.OptiMonk.Visitor.createAdapter();
+
+    setAssocData(pvData, adapter);
+
+    if (OptiMonk.campaigns.filter(campaign => campaign.hasVisitorCartRules()).length) {
+      observeAjaxCartActions(adapter);
+      fetchCart(adapter);
+    }
+
+    if (OptiMonk.campaigns.filter(campaign => campaign.hasVisitorAttributeRules()).length) {
+      makePostRequest("//www.francisfordcoppolawinery.com/index.php?plugin=optimonk&action=productData", { body })
+        .then((response) => {
+          var data = JSON.parse(response);
+          setAssocData(data, adapter);
+        });
+    }
+  });
+}());
+
+</script>
+<script type="text/javascript" src="https://onsite.optimonk.com/script.js?account=231676" async></script><script>window._wca = window._wca || [];</script>
+
+	<!-- This site is optimized with the Yoast SEO plugin v20.11-RC4 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Sofia Rosé | Francis Ford Coppola Winery</title>
+	<link rel="canonical" href="https://www.francisfordcoppolawinery.com/store/sofia-rose/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Sofia Rosé | Francis Ford Coppola Winery" />
+	<meta property="og:description" content="Crisp natural acidity with flavors of red cherry, tangerine, apple, flint and aromatic notes of strawberry, blood orange and acacia" />
+	<meta property="og:url" content="https://www.francisfordcoppolawinery.com/store/sofia-rose/" />
+	<meta property="og:site_name" content="Francis Ford Coppola Winery" />
+	<meta property="article:publisher" content="https://www.facebook.com/coppolawine" />
+	<meta property="article:modified_time" content="2024-08-21T07:30:44+00:00" />
+	<meta property="og:image" content="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png" />
+	<meta property="og:image:width" content="975" />
+	<meta property="og:image:height" content="975" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@coppolawine" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="1 minute" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.francisfordcoppolawinery.com/store/sofia-rose/","url":"https://www.francisfordcoppolawinery.com/store/sofia-rose/","name":"Sofia Rosé | Francis Ford Coppola Winery","isPartOf":{"@id":"https://www.francisfordcoppolawinery.com/#website"},"primaryImageOfPage":{"@id":"https://www.francisfordcoppolawinery.com/store/sofia-rose/#primaryimage"},"image":{"@id":"https://www.francisfordcoppolawinery.com/store/sofia-rose/#primaryimage"},"thumbnailUrl":"https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png","datePublished":"2023-07-26T16:40:29+00:00","dateModified":"2024-08-21T07:30:44+00:00","breadcrumb":{"@id":"https://www.francisfordcoppolawinery.com/store/sofia-rose/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.francisfordcoppolawinery.com/store/sofia-rose/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.francisfordcoppolawinery.com/store/sofia-rose/#primaryimage","url":"https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png","contentUrl":"https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png","width":975,"height":975},{"@type":"BreadcrumbList","@id":"https://www.francisfordcoppolawinery.com/store/sofia-rose/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.francisfordcoppolawinery.com/"},{"@type":"ListItem","position":2,"name":"Store","item":"https://www.francisfordcoppolawinery.com/store/"},{"@type":"ListItem","position":3,"name":"Sofia Rosé"}]},{"@type":"WebSite","@id":"https://www.francisfordcoppolawinery.com/#website","url":"https://www.francisfordcoppolawinery.com/","name":"Francis Ford Coppola Winery","description":"Geyserville, CA","publisher":{"@id":"https://www.francisfordcoppolawinery.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.francisfordcoppolawinery.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.francisfordcoppolawinery.com/#organization","name":"Francis Ford Coppola Winery","url":"https://www.francisfordcoppolawinery.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.francisfordcoppolawinery.com/#/schema/logo/image/","url":"http://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/FrancisFordCoppolaLogo.jpg","contentUrl":"http://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/FrancisFordCoppolaLogo.jpg","width":1024,"height":768,"caption":"Francis Ford Coppola Winery"},"image":{"@id":"https://www.francisfordcoppolawinery.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/coppolawine","https://twitter.com/coppolawine","https://www.instagram.com/coppolawine","http://www.youtube.com/coppolawine","http://www.yelp.com/biz/francis-ford-coppola-winery-geyserville"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//snippets.bloyal.io' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//use.fontawesome.com' />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.francisfordcoppolawinery.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+		<style id="content-control-block-styles">
+			@media (max-width: 640px) {
+	.cc-hide-on-mobile {
+		display: none !important;
+	}
+}
+@media (min-width: 641px) and (max-width: 920px) {
+	.cc-hide-on-tablet {
+		display: none !important;
+	}
+}
+@media (min-width: 921px) and (max-width: 1440px) {
+	.cc-hide-on-desktop {
+		display: none !important;
+	}
+}		</style>
+		<link rel='stylesheet' id='easy-autocomplete-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/easy-autocomplete/easy-autocomplete.min.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='easy-autocomplete-theme-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/easy-autocomplete/easy-autocomplete.themes.min.css?ver=3.3.4' media='all' />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.francisfordcoppolawinery.com/wp-includes/css/dist/block-library/style.min.css?ver=6.6.1' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css' href='https://www.francisfordcoppolawinery.com/wp-includes/css/dist/block-library/theme.min.css?ver=6.6.1' media='all' />
+<style id='ft-features-style-inline-css'>
+.ft-features-block > div {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@supports (width: min(250px, 100%)) {
+  .ft-features-block > div {
+    grid-template-columns: repeat(
+      var(--no-of-columns),
+      minmax(min(250px, 100%), 1fr)
+    );
+  }
+}
+
+</style>
+<style id='ft-info-card-style-inline-css'>
+.ft-info-card-box {
+    width: calc(100% - 40px);
+    margin: 60px auto;
+    max-width: 900px;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.fadeIn .ft-info-card-box {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 1;
+    z-index: 1;
+}
+</style>
+<style id='ft-gallery-style-inline-css'>
+.ft-gallery-block {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@supports (width: min(250px, 100%)) {
+  .ft-gallery-block {
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  }
+}
+
+</style>
+<style id='ft-menu-style-inline-css'>
+.ft-menu-row-img {
+    -webkit-clip-path: inset(0 0 30% 30%);
+    clip-path: inset(0 0 30% 30%);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.fadeIn .ft-menu-row-img {
+    -webkit-clip-path: inset(0 0 0% 0%);
+    clip-path: inset(0 0 0% 0%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+
+</style>
+<style id='ft-full-bleed-cta-style-inline-css'>
+.full-bleed-cta-box {
+    padding: 80px 60px;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.fadeIn .full-bleed-cta-box {
+    -webkit-transform: scale(1);
+    transform: scale(1); 
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 1;
+}
+</style>
+<style id='ft-basic-content-style-inline-css'>
+.ft-basic-content-block-heading::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgb(178,144,98);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, rgba(178,144,98,1)), to(rgba(178,144,98,0)));
+    background: linear-gradient(to top, rgba(242,240,233,1) 90%, rgba(242,240,233,0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.fadeIn .ft-basic-content-block-heading::after {
+    top: 100%;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    height: 0;
+}
+
+.ft-basic-content-block-img {
+    -webkit-clip-path: inset(0 30% 30% 30%);
+    clip-path: inset(0 30% 30% 30%);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.ft-basic-content-block-img.fadeIn {
+    -webkit-clip-path: inset(0 0 0% 0%);
+    clip-path: inset(0 0 0% 0%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+</style>
+<style id='ft-navigation-style-inline-css'>
+ul.ft-navigation-block__list > li > a {
+  display: block;
+  border-bottom: 2px solid transparent;
+  padding: 1rem 1.5rem;
+  text-decoration: none !important;
+}
+
+ul.ft-navigation-block__list > li > a:hover {
+  border-color: rgb(59 130 246);
+}
+
+ul.ft-navigation-block__list > li > a:active {
+  border-color: rgb(100 116 139);
+}
+
+</style>
+<style id='ft-modal-style-inline-css'>
+.ft-modal-block {
+  position: fixed;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ft-modal-block.contain {
+  --margin: 24px;
+  overflow: auto;
+  max-inline-size: calc(100% - (var(--margin) * 2));
+  max-block-size: calc(100% - (var(--margin) * 2));
+}
+
+</style>
+<style id='ft-mixed-content-style-inline-css'>
+.ft-mixed-content-img {
+    -webkit-clip-path: inset(0 30% 30% 0);
+    clip-path: inset(0 30% 30% 0);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.fadeIn .ft-mixed-content-img {
+    -webkit-clip-path: inset(0 0 0% 0%);
+    clip-path: inset(0 0 0% 0%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+</style>
+<style id='ffcw-wines-block-style-inline-css'>
+.spiralFan {
+  position: relative;
+  top: -20px;
+  height: 0;
+  padding-bottom: 125%;
+  padding-bottom: clamp(500px, 125%, 1500px);
+  width: 100%;
+  left: 0;
+}
+
+.spiralFan > img {
+  position: absolute;
+  width: 25%;
+  top: -12%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  left: 0;
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.spiralFan.spread > img:nth-of-type(2) {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 7%;
+  left: -7%;
+}
+
+.spiralFan.spread > img:nth-of-type(3) {
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+  top: 26%;
+  left: 0%;
+}
+
+.spiralFan.spread > img:nth-of-type(4) {
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  top: 40%;
+  left: 18%;
+}
+
+.spiralFan.spread > img:nth-of-type(5) {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+  top: 46%;
+  left: 39%;
+}
+
+.spiralFan.spread > img:nth-of-type(6) {
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  top: 47%;
+  left: 61%;
+}
+
+@media screen and (min-width: 40em) {
+  .spiralFan {
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .spiralFan {
+    top: 0;
+    max-width: 1200px;
+    width: 80%;
+    position: absolute;
+  }
+}
+
+</style>
+<style id='ft-icon-rows-style-inline-css'>
+.icon-rows-head-wrapper::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgb(242,240,233);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, rgba(242,240,233,1)), to(rgba(242,240,233,0)));
+    background: linear-gradient(to top, rgba(242,240,233,1) 90%, rgba(242,240,233,0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.fadeIn .icon-rows-head-wrapper::after {
+    top: 100%;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+    height: 0;
+}
+</style>
+<style id='ft-layered-content-style-inline-css'>
+.ft-layered-content-block-img,
+.ft-layered-content-block-img-footer {
+    -webkit-clip-path: inset(0 30% 30% 30%);
+    clip-path: inset(0 30% 30% 30%);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.imgSpreadFadeIn .ft-layered-content-block-img-footer,
+.fadeIn .ft-layered-content-block-img {
+    -webkit-clip-path: inset(0 0 0% 0%);
+    clip-path: inset(0 0 0% 0%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.ft-layered-content-block-img-sm {
+    
+    transition-delay: .75s !important;
+}
+
+.ft-layered-content-block-img-sm-two {
+    transition-delay: .5s !important;
+}
+
+.ft-layered-content-block-spread {
+    -webkit-clip-path: inset(0 30% 30% 30%);
+    clip-path: inset(0 30% 30% 30%);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.spreadFadeIn .ft-layered-content-block-spread {
+    -webkit-clip-path: inset(0 0 0% 0%);
+    clip-path: inset(0 0 0% 0%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.ft-layered-content-block-feature {
+    /* padding: 40px; */
+    margin-bottom: 30px;
+    cursor: pointer;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.spreadFadeIn .ft-layered-content-block-feature {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 1;
+    z-index: 1;
+}
+
+.ft-layered-content-block-feature:nth-of-type(2) {
+    transition-delay: 0.2s;
+}
+
+.ft-layered-content-block-feature:nth-of-type(3) {
+    transition-delay: 0.4s;
+}
+
+.ft-layered-content-block-img {
+    -webkit-clip-path: inset(0 30% 30% 30%);
+    clip-path: inset(0 30% 30% 30%);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+}
+</style>
+<style id='ft-content-overlay-style-inline-css'>
+.ft-content-overlay-box {
+    padding: 80px 60px;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.fadeIn .ft-content-overlay-box {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 1;
+}
+</style>
+<style id='ft-fancy-list-style-inline-css'>
+article:hover > .card-number {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke-color: #fff;
+}
+
+.card-number {
+  color: #b29062;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #b29062;
+}
+
+@media (max-width: 1023px) {
+  .fancy-list-bg {
+    opacity: 0 !important;
+    scale: 0.5;
+
+    .fadeIn & {
+      opacity: 1 !important;
+      scale: 1;
+    }
+  }
+
+  .fancy-list-button {
+
+    .fadeIn & {
+      animation: 300ms fadeInUp 300ms ease both;
+    }
+  }
+}
+
+</style>
+<style id='ft-image-row-style-inline-css'>
+.ft-image-row img:not(.no-animate) {
+    transition: right 0.3s ease;
+    object-fit: contain;
+}
+
+.ft-image-row img:not(.no-animate):nth-of-type(1) {
+    width: 26%;
+    max-width: 372px;
+    z-index: 10;
+}
+
+.ft-image-row img:not(.no-animate):nth-of-type(2) {
+    max-width: 415px;
+    width: 29%;
+    right: calc(0vw);
+    z-index: 20;
+    top: 0;
+}
+
+.ft-image-row img:not(.no-animate):nth-of-type(3) {
+    top: 11%;
+    max-width: 400px;
+    width: 28%;
+    z-index: 30;
+    right: calc(80vw - 28%);
+}
+
+.ft-image-row img:not(.no-animate):nth-of-type(4) {
+    max-width: 400px;
+    width: 28%;
+    z-index: 0;
+    right: calc(60vw - 28%);
+    top: 0;
+}
+
+.ft-image-row img:not(.no-animate):nth-of-type(5) {
+    top: 50%;
+    max-width: 310px;
+    width: 22%;
+    z-index: 1;
+    right: calc(36vw - 22%);
+    z-index: 40;
+}
+</style>
+<link rel='stylesheet' id='ft-full-bleed-parallax-style-css' href='https://www.francisfordcoppolawinery.com/wp-content/themes/francis-ford-coppola/blocks/full-bleed-parallax/full-bleed-parallax.css?ver=6.6.1' media='all' />
+<style id='ft-alternating-content-style-inline-css'>
+.ft-alternating-img-right {
+    -webkit-clip-path: inset(0 0 30% 30%);
+    clip-path: inset(0 0 30% 30%);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.fadeIn .ft-alternating-img-right {
+    -webkit-clip-path: inset(0 0 0% 0%);
+    clip-path: inset(0 0 0% 0%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+</style>
+<style id='ft-collage-style-inline-css'>
+.imageMask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .maskLeft img {
+    clip-path: inset(0 30% 30% 0);
+    transform: scale(1.2);
+    transition: all 0.3s;
+  }
+  
+  .maskRight img {
+    clip-path: inset(0 0 30% 30%);
+    transform: scale(1.2);
+    transition: all 0.3s;
+  }
+  
+  .maskCenter img,
+  .callout-featured {
+    clip-path: inset(0 30% 30% 30%);
+    transform: scale(1.2);
+    transition: all 0.3s;
+    width: 100%;
+  }
+  
+  .fadeIn .maskLeft.removeMask img,
+  .fadeIn .maskRight.removeMask img,
+  .fadeIn .maskCenter.removeMask img,
+  .fadeIn .callout-featured {
+    clip-path: inset(0 0 0% 0%);
+    transition: all 0.3s;
+    transform: scale(1);
+    transition-timing-function: ease-out;
+  }
+  
+  .imageMask img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    height: inherit;
+    min-width: 100%;
+  }
+  
+</style>
+<style id='ft-callout-style-inline-css'>
+.ft-callout-block-img {
+    -webkit-clip-path: inset(0 0 30% 30%);
+    clip-path: inset(0 0 30% 30%);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.fadeIn .ft-callout-block-img-top,
+.ft-callout-block-img-bottom.fadeIn {
+    -webkit-clip-path: inset(0 0 0% 0%);
+    clip-path: inset(0 0 0% 0%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+</style>
+<style id='ft-promo-cards-style-inline-css'>
+.ft-promo-card-block-box {
+    margin-bottom: 30px;
+    cursor: pointer;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.fadeIn .ft-promo-card-block-box {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 1;
+    z-index: 1;
+}
+
+.ft-promo-card-block-box:nth-of-type(2) {
+    transition-delay: 0.2s;
+}
+
+.ft-promo-card-block-box:nth-of-type(3) {
+    transition-delay: 0.4s;
+}
+
+.ft-promo-card-block-footer img {
+    -webkit-clip-path: inset(0 30% 30% 30%);
+    clip-path: inset(0 30% 30% 30%);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    transition-delay: 2s;
+}
+
+.ft-promo-card-block-footer.spreadFadeIn img {
+    -webkit-clip-path: inset(0 0 0% 0%);
+    clip-path: inset(0 0 0% 0%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    
+}
+
+.large-title-wine-bottle-wrapper {
+   padding-bottom: 62%;;
+}
+
+.large-title-wine-bottle {
+    position: absolute;
+    /* width: 30%; */
+    height: 382px;
+    bottom: 0;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    object-fit: contain;
+    object-position: bottom;
+}
+
+.large-title-wine-bottle:nth-of-type(1) {
+    left: 14%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /* width: 27%; */
+    bottom: 4%;
+}
+
+.large-title-wine-bottle:nth-of-type(2) {
+    left: 26%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /* width: 28%; */
+    bottom: 2%;
+}
+
+.large-title-wine-bottle:nth-of-type(3) {
+    left: 38%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /* width: 29%; */
+    bottom: 1%;
+}
+
+.large-title-wine-bottle:nth-of-type(4) {
+    left: 86%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /* width: 27.5%; */
+    bottom: 4%;
+}
+
+.large-title-wine-bottle:nth-of-type(5) {
+    left: 74%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /* width: 28%; */
+    bottom: 2%;
+}
+
+.large-title-wine-bottle:nth-of-type(6) {
+    left: 62%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /* width: 29%; */
+    bottom: 1%;
+}
+
+</style>
+<style id='ft-quote-block-style-inline-css'>
+.quote-block-text-article::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgb(242,240,233);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, rgba(242,240,233,1)), to(rgba(242,240,233,0)));
+    background: linear-gradient(to top, rgba(242,240,233,1) 90%, rgba(242,240,233,0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.quote-block.fadeIn .quote-block-text-article::after {
+    top: 100%;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+    height: 0;
+}
+
+</style>
+<style id='ft-image-collage-style-inline-css'>
+.ft-image-collage-img {
+    -webkit-clip-path: inset(0 0 30% 30%);
+    clip-path: inset(0 0 30% 30%);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.fadeIn .ft-image-collage-img {
+    -webkit-clip-path: inset(0 0 0% 0%);
+    clip-path: inset(0 0 0% 0%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+</style>
+<style id='ft-location-style-inline-css'>
+.ft-location-img {
+    -webkit-clip-path: inset(0 0 30% 30%);
+    clip-path: inset(0 0 30% 30%);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.fadeIn .ft-location-img {
+    -webkit-clip-path: inset(0 0 0% 0%);
+    clip-path: inset(0 0 0% 0%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+</style>
+<style id='ft-title-and-images-style-inline-css'>
+.ft-title-and-images-img {
+    -webkit-clip-path: inset(0 0 30% 30%);
+    clip-path: inset(0 0 30% 30%);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.fadeIn .ft-title-and-images-img {
+    -webkit-clip-path: inset(0 0 0% 0%);
+    clip-path: inset(0 0 0% 0%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; 
+}
+</style>
+<style id='ft-large-title-style-inline-css'>
+.ft-blocks:not(.fadeIn) .animate-bottles img {
+    transform: none !important;
+}
+
+</style>
+<style id='ffcw-events-style-inline-css'>
+.ffcw-events-bloc-featured,
+.ffcw-events-block-subevent {
+  width: calc(100% - 40px);
+  margin: 60px auto;
+  -webkit-transform: scale(0.6);
+  transform: scale(0.6);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.fadeIn .ffcw-events-bloc-featured,
+.ffcw-events-block-subevent.subFadeIn {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 1;
+}
+
+</style>
+<style id='ft-block-quote-style-inline-css'>
+.block-quote blockquote::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgb(160,105,16);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, rgba(160,105,16,1)), to(rgba(160,105,16,0)));
+    background: linear-gradient(to top, rgba(160,105,16,1) 90%, rgba(160,105,16,0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.fadeIn blockquote::after {
+    top: 100%;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+    height: 0;
+}
+</style>
+<style id='ft-carousel-style-inline-css'>
+.ft-carousel-block {
+  display: flex;
+  block-size: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-color: #fff #000;
+}
+
+.ft-carousel-block::-webkit-scrollbar {
+  block-size: 1rem;
+}
+
+.ft-carousel-block::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+.ft-carousel-block::-webkit-scrollbar-thumb {
+  background-color: #000;
+  background-image: linear-gradient(
+    #000 0,
+    #000 0.25rem,
+    #fff 0.25rem,
+    #fff 0.75rem,
+    #000 0.75rem
+  );
+}
+
+.ft-carousel-block > * {
+  flex: 0 0 auto;
+}
+
+.ft-carousel-block > img {
+  block-size: 100%;
+  flex-basis: auto;
+  width: auto;
+}
+
+.ft-carousel-block > * + * {
+  margin-inline-start: 1rem;
+}
+
+.ft-carousel-block.overflowing {
+  padding-block-end: 1rem;
+}
+
+</style>
+<style id='wp-parsely-recommendations-style-inline-css'>
+.parsely-recommendations-list-title{font-size:1.2em}.parsely-recommendations-list{list-style:none;padding:unset}.parsely-recommendations-cardbody{overflow:hidden;padding:.8em;text-overflow:ellipsis;white-space:nowrap}.parsely-recommendations-cardmedia{padding:.8em .8em 0}
+
+</style>
+<link rel='stylesheet' id='wc-blocks-vendors-style-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=10.4.5' media='all' />
+<link rel='stylesheet' id='wc-blocks-style-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=10.4.5' media='all' />
+<link rel='stylesheet' id='content-control-block-styles-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/content-control/dist/style-block-editor.css?ver=2.3.0' media='all' />
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--tertiary: #9c2335;--wp--preset--color--complement: #14B8A6;--wp--preset--color--dark: #1F2937;--wp--preset--color--light: #F9FAFB;--wp--preset--color--body: #0A0A0A;--wp--preset--color--tan: #F2F0E9;--wp--preset--color--light-gold: #B29062;--wp--preset--color--gold: #A06910;--wp--preset--color--dark-gold: #86754d;--wp--preset--color--gold-alt: #B37B21;--wp--preset--color--deep-green: #004340;--wp--preset--color--deep-blue: #313861;--wp--preset--color--blue: #243F7E;--wp--preset--color--less-dark: #333232;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 0.875rem;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 1.125rem;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--regular: 1.5rem;--wp--preset--font-size--xlarge: 1.25rem;--wp--preset--font-size--xxlarge: 1.5rem;--wp--preset--font-size--xxxlarge: 1.875rem;--wp--preset--font-size--xl: 1.25rem;--wp--preset--font-size--xxl: 1.5rem;--wp--preset--font-size--xxxl: 1.875rem;--wp--preset--font-family--financier-display: FinancierDisplay, Georgia, Times, serif;--wp--preset--font-family--montserrat: Montserrat, Helvetica, Arial, sans-serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 1024px;--wp--style--global--wide-size: 1440px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:root :where(body){padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-tertiary-color{color: var(--wp--preset--color--tertiary) !important;}.has-complement-color{color: var(--wp--preset--color--complement) !important;}.has-dark-color{color: var(--wp--preset--color--dark) !important;}.has-light-color{color: var(--wp--preset--color--light) !important;}.has-body-color{color: var(--wp--preset--color--body) !important;}.has-tan-color{color: var(--wp--preset--color--tan) !important;}.has-light-gold-color{color: var(--wp--preset--color--light-gold) !important;}.has-gold-color{color: var(--wp--preset--color--gold) !important;}.has-dark-gold-color{color: var(--wp--preset--color--dark-gold) !important;}.has-gold-alt-color{color: var(--wp--preset--color--gold-alt) !important;}.has-deep-green-color{color: var(--wp--preset--color--deep-green) !important;}.has-deep-blue-color{color: var(--wp--preset--color--deep-blue) !important;}.has-blue-color{color: var(--wp--preset--color--blue) !important;}.has-less-dark-color{color: var(--wp--preset--color--less-dark) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-tertiary-background-color{background-color: var(--wp--preset--color--tertiary) !important;}.has-complement-background-color{background-color: var(--wp--preset--color--complement) !important;}.has-dark-background-color{background-color: var(--wp--preset--color--dark) !important;}.has-light-background-color{background-color: var(--wp--preset--color--light) !important;}.has-body-background-color{background-color: var(--wp--preset--color--body) !important;}.has-tan-background-color{background-color: var(--wp--preset--color--tan) !important;}.has-light-gold-background-color{background-color: var(--wp--preset--color--light-gold) !important;}.has-gold-background-color{background-color: var(--wp--preset--color--gold) !important;}.has-dark-gold-background-color{background-color: var(--wp--preset--color--dark-gold) !important;}.has-gold-alt-background-color{background-color: var(--wp--preset--color--gold-alt) !important;}.has-deep-green-background-color{background-color: var(--wp--preset--color--deep-green) !important;}.has-deep-blue-background-color{background-color: var(--wp--preset--color--deep-blue) !important;}.has-blue-background-color{background-color: var(--wp--preset--color--blue) !important;}.has-less-dark-background-color{background-color: var(--wp--preset--color--less-dark) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-tertiary-border-color{border-color: var(--wp--preset--color--tertiary) !important;}.has-complement-border-color{border-color: var(--wp--preset--color--complement) !important;}.has-dark-border-color{border-color: var(--wp--preset--color--dark) !important;}.has-light-border-color{border-color: var(--wp--preset--color--light) !important;}.has-body-border-color{border-color: var(--wp--preset--color--body) !important;}.has-tan-border-color{border-color: var(--wp--preset--color--tan) !important;}.has-light-gold-border-color{border-color: var(--wp--preset--color--light-gold) !important;}.has-gold-border-color{border-color: var(--wp--preset--color--gold) !important;}.has-dark-gold-border-color{border-color: var(--wp--preset--color--dark-gold) !important;}.has-gold-alt-border-color{border-color: var(--wp--preset--color--gold-alt) !important;}.has-deep-green-border-color{border-color: var(--wp--preset--color--deep-green) !important;}.has-deep-blue-border-color{border-color: var(--wp--preset--color--deep-blue) !important;}.has-blue-border-color{border-color: var(--wp--preset--color--blue) !important;}.has-less-dark-border-color{border-color: var(--wp--preset--color--less-dark) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-regular-font-size{font-size: var(--wp--preset--font-size--regular) !important;}.has-xlarge-font-size{font-size: var(--wp--preset--font-size--xlarge) !important;}.has-xxlarge-font-size{font-size: var(--wp--preset--font-size--xxlarge) !important;}.has-xxxlarge-font-size{font-size: var(--wp--preset--font-size--xxxlarge) !important;}.has-xl-font-size{font-size: var(--wp--preset--font-size--xl) !important;}.has-xxl-font-size{font-size: var(--wp--preset--font-size--xxl) !important;}.has-xxxl-font-size{font-size: var(--wp--preset--font-size--xxxl) !important;}.has-financier-display-font-family{font-family: var(--wp--preset--font-family--financier-display) !important;}.has-montserrat-font-family{font-family: var(--wp--preset--font-family--montserrat) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='photoswipe-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=7.9.0' media='all' />
+<link rel='stylesheet' id='photoswipe-default-skin-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=7.9.0' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=7.9.0' media='all' />
+<style id='woocommerce-layout-inline-css'>
+
+	.infinite-scroll .woocommerce-pagination {
+		display: none;
+	}
+</style>
+<link rel='stylesheet' id='woocommerce-smallscreen-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=7.9.0' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=7.9.0' media='all' />
+<style id='woocommerce-inline-inline-css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='bloyal_checkout_style_sheet-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/bloyal//assets/css/bloyal_checkout.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='woof-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/css/front.css?ver=3.3.4' media='all' />
+<style id='woof-inline-css'>
+
+.woof_products_top_panel li span, .woof_products_top_panel2 li span{background: url(https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/img/delete.png);background-size: 14px 14px;background-repeat: no-repeat;background-position: right;}
+.woof_show_auto_form,.woof_hide_auto_form{ background-image: url('http://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/plus-icon-dark.1e83a552b097.svg?w=150&h=150&crop=1'); }
+.woof_childs_list_opener span.woof_is_closed{
+                        background: url(http://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/plus-icon-dark.1e83a552b097.svg?w=150&h=150&crop=1);
+                    }
+.woof_childs_list_opener span.woof_is_opened{
+                        background: url(http://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/minus-icon-dark.d612ea4db0af.svg?w=150&h=150&crop=1);
+                    }
+.woof_edit_view{
+                    display: none;
+                }
+
+
+</style>
+<link rel='stylesheet' id='chosen-drop-down-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/chosen/chosen.min.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='icheck-jquery-color-flat-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/icheck/skins/flat/_all.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='icheck-jquery-color-square-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/icheck/skins/square/_all.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='icheck-jquery-color-minimal-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/icheck/skins/minimal/_all.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_by_author_html_items-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_author/css/by_author.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_by_backorder_html_items-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_backorder/css/by_backorder.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_by_featured_html_items-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_featured/css/by_featured.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_by_instock_html_items-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_instock/css/by_instock.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_by_onsales_html_items-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_onsales/css/by_onsales.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_by_sku_html_items-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_sku/css/by_sku.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_by_text_html_items-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_text/assets/css/front.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_color_html_items-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/color/css/html_types/color.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_image_html_items-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/image/css/html_types/image.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_label_html_items-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/label/css/html_types/label.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_select_hierarchy_html_items-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/select_hierarchy/css/html_types/select_hierarchy.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_select_radio_check_html_items-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/select_radio_check/css/html_types/select_radio_check.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_slider_html_items-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/slider/css/html_types/slider.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_sd_html_items_checkbox-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/css/elements/checkbox.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_sd_html_items_radio-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/css/elements/radio.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_sd_html_items_switcher-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/css/elements/switcher.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_sd_html_items_color-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/css/elements/color.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_sd_html_items_tooltip-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/css/tooltip.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_sd_html_items_front-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/css/front.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof-switcher23-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/css/switcher.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='ageverification-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/wp-age-verification/dist/ageverification.css?ver=6.6.1' media='all' />
+<link rel='stylesheet' id='aws-style-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/advanced-woo-search/assets/css/common.min.css?ver=3.08' media='all' />
+<link rel='stylesheet' id='hint-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woo-fly-cart/assets/hint/hint.min.css?ver=6.6.1' media='all' />
+<link rel='stylesheet' id='woofc-fonts-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woo-fly-cart/assets/css/fonts.css?ver=6.6.1' media='all' />
+<link rel='stylesheet' id='woofc-frontend-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woo-fly-cart/assets/css/frontend.css?ver=5.7.0' media='all' />
+<style id='woofc-frontend-inline-css'>
+.woofc-area.woofc-style-01 .woofc-inner, .woofc-area.woofc-style-03 .woofc-inner, .woofc-area.woofc-style-02 .woofc-area-bot .woofc-action .woofc-action-inner > div a:hover, .woofc-area.woofc-style-04 .woofc-area-bot .woofc-action .woofc-action-inner > div a:hover {
+                            background-color: #000000;
+                        }
+
+                        .woofc-area.woofc-style-01 .woofc-area-bot .woofc-action .woofc-action-inner > div a, .woofc-area.woofc-style-02 .woofc-area-bot .woofc-action .woofc-action-inner > div a, .woofc-area.woofc-style-03 .woofc-area-bot .woofc-action .woofc-action-inner > div a, .woofc-area.woofc-style-04 .woofc-area-bot .woofc-action .woofc-action-inner > div a {
+                            outline: none;
+                            color: #000000;
+                        }
+
+                        .woofc-area.woofc-style-02 .woofc-area-bot .woofc-action .woofc-action-inner > div a, .woofc-area.woofc-style-04 .woofc-area-bot .woofc-action .woofc-action-inner > div a {
+                            border-color: #000000;
+                        }
+
+                        .woofc-area.woofc-style-05 .woofc-inner{
+                            background-color: #000000;
+                            background-image: url('');
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                        
+                        .woofc-count span {
+                            background-color: #000000;
+                        }
+</style>
+<link rel='stylesheet' id='perfect-scrollbar-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woo-smart-wishlist/assets/libs/perfect-scrollbar/css/perfect-scrollbar.min.css?ver=6.6.1' media='all' />
+<link rel='stylesheet' id='perfect-scrollbar-wpc-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woo-smart-wishlist/assets/libs/perfect-scrollbar/css/custom-theme.css?ver=6.6.1' media='all' />
+<link rel='stylesheet' id='notiny-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woo-smart-wishlist/assets/libs/notiny/notiny.css?ver=6.6.1' media='all' />
+<link rel='stylesheet' id='woosw-icons-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woo-smart-wishlist/assets/css/icons.css?ver=4.8.7' media='all' />
+<link rel='stylesheet' id='woosw-frontend-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woo-smart-wishlist/assets/css/frontend.css?ver=4.8.7' media='all' />
+<style id='woosw-frontend-inline-css'>
+.woosw-popup .woosw-popup-inner .woosw-popup-content .woosw-popup-content-bot .woosw-notice { background-color: #5fbd74; } .woosw-popup .woosw-popup-inner .woosw-popup-content .woosw-popup-content-bot .woosw-popup-content-bot-inner a:hover { color: #5fbd74; border-color: #5fbd74; } 
+</style>
+<link rel='stylesheet' id='francis-ford-coppola-css' href='https://www.francisfordcoppolawinery.com/wp-content/themes/francis-ford-coppola/css/app.css?ver=0.1.1' media='all' />
+<link rel='stylesheet' id='updates-css' href='https://www.francisfordcoppolawinery.com/wp-content/themes/francis-ford-coppola/css/post-launch.css?ver=6.6.1' media='all' />
+<link rel='stylesheet' id='font-montserrat-css' href='https://fonts.googleapis.com/css2?family=Montserrat%3Awght%40400%3B500%3B600%3B700&#038;display=swap&#038;ver=0.1.1' media='all' />
+<link rel='stylesheet' id='sv-wc-payment-gateway-payment-form-v5_10_12-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-gateway-usa-epay/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/css/frontend/sv-wc-payment-gateway-payment-form.min.css?ver=5.10.12' media='all' />
+<link rel='stylesheet' id='font-awesome-official-css' href='https://use.fontawesome.com/releases/v6.4.0/css/all.css' media='all' integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous" />
+<link rel='stylesheet' id='font-awesome-official-v4shim-css' href='https://use.fontawesome.com/releases/v6.4.0/css/v4-shims.css' media='all' integrity="sha384-TjXU13dTMPo+5ZlOUI1IGXvpmajjoetPqbUJqTx+uZ1bGwylKHNEItuVe/mg/H6l" crossorigin="anonymous" />
+<!--n2css--><script type="text/javascript" id="woocommerce-google-analytics-integration-gtag-js-after">
+/* <![CDATA[ */
+/* Google Analytics for WooCommerce (gtag.js) */
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					// Set up default consent state.
+					for ( const mode of [{"analytics_storage":"denied","ad_storage":"denied","ad_user_data":"denied","ad_personalization":"denied","region":["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IS","IE","IT","LV","LI","LT","LU","MT","NL","NO","PL","PT","RO","SK","SI","ES","SE","GB","CH"]}] || [] ) {
+						gtag( "consent", "default", { "wait_for_update": 500, ...mode } );
+					}
+					gtag("js", new Date());
+					gtag("set", "developer_id.dOGY3NW", true);
+					gtag("config", "G-H4D8TYL42L", {"track_404":true,"allow_google_signals":true,"logged_in":false,"linker":{"domains":[],"allow_incoming":false},"custom_map":{"dimension1":"logged_in"}});
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-includes/js/dist/hooks.min.js?ver=2810c76e705dd1a53b18" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://stats.wp.com/w.js?ver=202434" id="woo-tracks-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/easy-autocomplete/jquery.easy-autocomplete.min.js?ver=3.3.4" id="easy-autocomplete-js"></script>
+<script type="text/javascript" id="woof-husky-js-extra">
+/* <![CDATA[ */
+var woof_husky_txt = {"ajax_url":"https:\/\/www.francisfordcoppolawinery.com\/wp-admin\/admin-ajax.php","plugin_uri":"https:\/\/www.francisfordcoppolawinery.com\/wp-content\/plugins\/woocommerce-products-filter\/ext\/by_text\/","loader":"https:\/\/www.francisfordcoppolawinery.com\/wp-content\/plugins\/woocommerce-products-filter\/ext\/by_text\/assets\/img\/ajax-loader.gif","not_found":"Nothing found!","prev":"Prev","next":"Next","site_link":"https:\/\/www.francisfordcoppolawinery.com","default_data":{"placeholder":"","behavior":"title_or_content_or_excerpt","search_by_full_word":"0","autocomplete":1,"how_to_open_links":"0","taxonomy_compatibility":"0","sku_compatibility":"1","custom_fields":"","search_desc_variant":"0","view_text_length":"10","min_symbols":"3","max_posts":"10","image":"","notes_for_customer":"","template":"","max_open_height":"300","page":0}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_text/assets/js/husky.js?ver=3.3.4" id="woof-husky-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/themes/francis-ford-coppola/blocks/modal/modal.js?ver=6.6.1" id="ft-modal-script-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/themes/francis-ford-coppola/blocks/full-bleed-parallax/full-bleed-parallax.js?ver=6.6.1" id="ft-full-bleed-parallax-script-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/themes/francis-ford-coppola/blocks/carousel/carousel.js?ver=6.6.1" id="ft-carousel-script-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/added-to-cart-popup-for-woocommerce/assets/js/front_hide_show.js?ver=1.0.0" id="front_hide_show_file-js"></script>
+<script type="text/javascript" id="popup_ajax_cart-js-extra">
+/* <![CDATA[ */
+var k_php_var = {"admin_url":"https:\/\/www.francisfordcoppolawinery.com\/wp-admin\/admin-ajax.php","nonce":"62ba7e0915"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/added-to-cart-popup-for-woocommerce/assets/js/popup_ajax.js?ver=1.0.0" id="popup_ajax_cart-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/recaptcha-woo/js/rcfwc.js?ver=1.0" id="rcfwc-js-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?explicit&amp;hl=en_US" id="recaptcha-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/wp-age-verification/dist/ageverification.js?ver=2.0.0" id="ageverification-js"></script>
+<script type="text/javascript" src="https://stats.wp.com/s-202434.js" id="woocommerce-analytics-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js?ver=6.6.1" id="jquery_payment-js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.3/icheck.min.js?ver=6.6.1" id="jquery_icheck-js"></script>
+<link rel="https://api.w.org/" href="https://www.francisfordcoppolawinery.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.francisfordcoppolawinery.com/wp-json/wp/v2/product/4508" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.francisfordcoppolawinery.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.6.1" />
+<meta name="generator" content="WooCommerce 7.9.0" />
+<link rel='shortlink' href='https://www.francisfordcoppolawinery.com/?p=4508' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.francisfordcoppolawinery.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.francisfordcoppolawinery.com%2Fstore%2Fsofia-rose%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.francisfordcoppolawinery.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.francisfordcoppolawinery.com%2Fstore%2Fsofia-rose%2F&#038;format=xml" />
+			<style>
+				.modal {
+					display: none; /* Hidden by default */
+					position: fixed; /* Stay in place */
+					z-index: 1000; /* Sit on top */
+					padding-top: 100px; /* Location of the box */
+					left: 0;
+					top: 0;
+					width: 100%; /* Full width */
+					height: 100%; /* Full height */
+					overflow: auto!important;
+									background: rgba(211,211,211,0.5);
+								}
+				.cart-item {
+					display: flex;
+					margin-bottom: 20px;
+				}
+				.quantiy{
+					width: 40%;
+					margin-left: 30px;
+				}
+
+				.product-thumbnail {
+					margin-right: 20px;
+				}
+
+				.product-thumbnail img {
+					max-width: 100px;
+				}
+
+				.product-details {
+					flex-grow: 1;
+				}
+
+				.product-name {
+					font-weight: bold;
+					margin-bottom: 5px;
+				}
+
+				.quantity-actions {
+					display: flex;
+					align-items: center;
+				}
+
+				.quantity-actions button {
+					margin-right: 5px;
+				}
+
+				.my-modal-box{
+										background-color: white;
+										width: 60%;
+					max-width: 100%;
+					min-width: 1%;
+					height: 60%;
+					min-height: 1%;
+					max-height: 100%;
+					top: 50%;
+					position: fixed;
+					box-sizing: border-box;
+					overflow: auto!important;
+					padding: 30px;
+				}
+
+				@keyframes fadeIn {
+					from {
+						opacity: 0;
+					}
+					to {
+						opacity: 1;
+					}
+				}
+
+			   @keyframes slideIn {
+					from {
+						
+						opacity: 0;
+						transform: translateY(-100%);
+					}
+					to {
+				 
+						opacity: 1;
+						 transform: translateY(0);
+					}
+				}
+
+				@keyframes zoomIn {
+					from {
+					  
+						opacity: 0;
+						transform: scale(0);
+					}
+					to {
+					   
+						opacity: 1;
+						transform: scale(1);
+					}
+				}
+
+				.animate-fade {
+					animation: fadeIn 0.5s;
+				}
+
+				.animate-slide {
+					animation: slideIn 0.5s;
+				}
+
+				.animate-zoom {
+					animation: zoomIn 0.5s;
+				}
+				/* Animation for left */
+				@keyframes moveLeft {
+					0% { transform: translateX(-50%); }
+					50% { transform: translateX(-40%); }
+					100% { transform: translateX(-50%); }
+				}
+
+				/* Animation for right */
+				@keyframes moveRight {
+					0% { transform: translateX(-50%); }
+					50% { transform: translateX(-60%); }
+					100% { transform: translateX(-50%); }
+				}
+
+				/* Animation for center */
+				@keyframes moveCenter {
+					0% { opacity: 0; }
+					50% { transform: translateX(-50%); }
+					100% { opacity: 1; }
+
+				}
+
+				/* Apply animations based on class */
+				.animate-left {
+					position: fixed;
+					background-color:;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					z-index: 1000; /* Adjust the z-index as necessary */
+					width: 50%;
+					height: 100%; /* Adjust the width as necessary */
+					overflow-y: auto; /* Enable vertical scrolling if content exceeds view*/
+				}
+				#k_pc_e_close_icon{
+					position: absolute;
+					top: 48px; /* Adjust top position as needed */
+					right: 10px; /* Adjust right position as needed */
+					z-index: 1100; /* Ensure close button is above the sidebar */
+					background-color: transparent;
+					border: none;
+					cursor: pointer;
+					font-size: 16px;
+				}
+
+				.animate-right {
+					right: 0;
+					position: fixed;
+					background-color:;
+					top: 0;
+					bottom: 0;
+					z-index: 1000; /* Adjust the z-index as necessary */
+					width: 50%;
+					height: 100%; /* Adjust the width as necessary */
+					overflow-y: auto;
+					}
+				.animate-center {
+				 position: fixed;
+					top: 50%;
+					right: 50%!important;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					z-index: 1000;
+
+				}
+
+
+				.k_pc_space_left {
+					padding-left: 14px!important;
+				}
+				/* Modal Content */
+				.modal-content {
+					padding: 20px;
+					box-sizing: border-box;
+					overflow: auto!important;
+				}
+				.cart_bg_c {
+										background-color: white;
+										
+				}
+				.suggested_title_color{
+					
+				}
+				.modal-header{
+					border-bottom: 1px solid #00000017;
+					box-sizing: border-box;
+				}
+				.modal-header h3{
+					color: #1A1D21;
+					font-size: 18px;
+					font-weight:700;
+					line-height: 26px;
+					margin: 0;
+					text-transform: ;
+					letter-spacing: 0.5px;
+				}
+
+				.my-modal-box ul{
+					list-style: none;
+					padding: 0;
+					margin:0;
+					overflow: auto!important;
+				}
+									.message_text_color {
+										padding: 5px 9px;
+					position: relative;
+					text-align: left;
+					border-radius: 4px;
+					margin-bottom: 10px;
+					margin-top: 18px;
+				}
+								.message_span_style{
+					position: relative;
+					box-sizing: border-box;
+					width: 100%;
+					display: block;
+					font-size: 14px;
+					line-height: 24px;
+					letter-spacing: 0px;
+					font-weight: 600;
+					padding-left: 28px;
+				}
+				.header_bar{
+					width:100%;
+					height:45px;
+					padding: 5px;
+					background-color:#0087eb;
+					text-align: right;
+				}
+				.custom_admin_color{
+									color:#FFFFFF;
+					background:#000000;
+									max-width: 30%;
+					min-width: 2%;
+					font-size: 12px;
+					display: inline-block;
+					margin: 5px;
+					border-radius: 38px;
+					height: min-content;
+				}
+				.custom_admin_color_view_cart{
+									color:#FFFFFF;
+					background:#000000;
+									max-width: 30%;
+					min-width: 2%;
+					font-size: 14px;
+					display: inline-block;
+					margin: 5px;
+					border-radius: 38px;
+					padding: 6px;
+					padding-left: 14px;
+					padding-right: 14px;
+					height: min-content;
+
+				}
+				.product_thumbnail_style,
+				.product-thumbnail img,
+				.layout-two .k-pc-product-thumb,
+				.layout-three .k-pc-product-thumb {
+					width: 60% !important;
+				}
+				.product_content{
+					width: 100%;
+					height: auto;
+					min-height:1%;
+					display: flex;
+				}
+				.title{
+				
+					
+				}
+				.shipping_fee_style_custom {
+					/*right: 0;
+					float: right;*/
+								font-size:14px!important;
+					
+				}
+				.shipping_fee_style_custom .woocommerce-Price-amount{
+								font-size:14px!important;
+					
+				}
+
+				.thumbnail_div{
+					left: 0;
+					top: 0;
+					width: 60%;
+					min-width: 2%;
+					height: auto;
+					overflow: auto!important;
+					background-color:;
+				}
+				.product_detail{
+					left: 0;
+					top: 0;
+					width: 38%;
+					min-width: 2%;
+					height: auto;
+					overflow: auto!important;
+					padding-left: 6px;
+									background-color:white;
+									
+				}
+				.cart_fee{
+					left: 0;
+					top: 0;
+					width: 100%;
+					min-width: 2%;
+					margin-top: 22px;
+					height: auto;
+					padding-left: 6px;
+								}
+				.tr_bg_c{
+					background-color:!important;
+				}
+				.margin_top{
+					margin-top: 20px;
+				}
+				.content_style{
+					/*margin-top: 40px;*/
+					font-size: 20px!important;
+					left: 0;
+					display: flex;
+				}
+				.short_dis{
+					font-size: 20px!important;
+					left: 0;
+					display: flex;
+					height: max-height;
+					max-height: 20%;
+					overflow: auto;
+				}
+				.cart_total{
+					display: flex;
+					margin-top: 40px;
+					font-size:  20px;
+									font-size:14px!important;
+				}
+				.price_cart_total{
+					display: flex;
+					font-size:  20px;
+					float: right;
+					right: 0;
+					font-size:14px!important;
+				}
+				.hr_style{
+					width: 100%;
+					background:!important;
+					
+				}
+				.hr_style_header{
+					width: 100%;
+								}
+				.txt_div{
+					position: absolute;
+					top: 8px;
+					left: 0;
+					float: left;
+					width: 100%;
+					min-width: 1%;
+				}
+				.ancher_tag_view_cart{
+					text-decoration: none;
+									color:#FFFFFF;
+					background:#000000;
+								}
+				.total_custom_color{
+									font-size:14px!important;
+				}
+				.shrt_dis_style{
+					font-size:14px!important;
+				}
+				.k-pc-grid-row{
+					content: "";
+					clear: both;
+					display: table;
+					width: 100%;
+					
+					text-align: left;
+				}
+				.kpc-col-1 {width: 8.33%;}
+				.kpc-col-2 {width: 16.66%;}
+				.kpc-col-3 {width: 25%;}
+				.kpc-col-4 {width: 32.33%;}
+				.kpc-col-5 {width: 41.66%;}
+				.kpc-col-6 {width: 50%;}
+				.kpc-col-7 {width: 58.33%;}
+				.kpc-col-8 {width: 66.66%;}
+				.kpc-col-9 {width: 75%;}
+				.kpc-col-10 {width: 83.33%;}
+				.kpc-col-11 {width: 91.66%;}
+				.kpc-col-12 {width: 100%;}
+
+
+				[class*="kpc-col-"] {
+					display: inline-block;
+					vertical-align: top;
+					padding-left: 15px;
+					padding-right:15px;
+				}
+
+				.koala-modal-content-wrap{
+					box-sizing: border-box;
+					position: relative;
+					height: 100%;
+					width: 100%;
+				}
+
+				.k-pc-product-info,
+				.k-pc-product-actions{
+					width: 100%;
+					display: block;
+					margin: 0px;
+				}
+
+				.k-pc-product-thumb img{
+					width: 100%;
+					object-fit: cover;
+				}
+
+				.k-pc-product-title-info h3{
+					font-size: 26px;
+					line-height: 36px;
+					margin-top: 0;
+									
+				}
+
+				/*.k-pc-product-title-info p{
+					font-size: 14px;
+					line-height: 24px;
+					color: black;
+					margin:10px 0px 10px;
+				}
+				*/
+
+				.k-pc-product-content{
+					text-align: left;
+				}
+
+				.k-pc-product-price-info span{
+					color: #404040;
+					font-size: 20px;
+					line-height: 30px;
+				}
+
+				.layout-one .k-pc-product-cart-info{
+					padding: 0px 0;
+					border-bottom: 1px solid #e0e0e0;
+					border-top: 1px solid #e0e0e0;
+					margin: 10px 0px;
+				}
+
+				.layout-two .k-pc-product-cart-info {
+					padding: 0;
+					border-left: 1px solid #e0e0e0;
+					padding-left: 15px;
+					margin: 0;
+					text-align: left;
+					font-size:14px!important;
+				}
+
+				.layout-three .k-pc-product-cart-info {
+					/*padding: 20px 0;
+					border-bottom: 1px solid #e0e0e0;
+					margin: 15px 0px;
+					text-align: left;
+					font-size:14px!important;
+				*/
+					}
+				.layout-two .k-pc-product-cart-info h4{
+					line-height: 28px;
+					margin-top: 0;
+					margin-bottom: 45px;
+									font-size:14px!important;
+				}
+
+				.k-pc-product-cart-info p{
+					position: relative;
+					margin: 8px 0px;
+									font-size:14px!important;
+				}
+
+				.k-pc-product-cart-info p label{
+					font-weight: 600;
+									font-size:14px!important;
+				}
+
+				.k-pc-product-cart-info p .woocommerce-Price-amount{
+					position: absolute;
+					/*right: 42px;*/
+					right: 0;
+					top: 0;
+					font-size: 16px;
+					line-height: 28px;
+					font-size:14px!important;
+					/*color: #404040;*/
+				}
+
+				.k-pc-product-cart-totals .woocommerce-Price-currencySymbol{
+					
+					font-size:14px!important;
+				}
+
+				.k-pc-product-cart-shipping p span{
+				/*	float: left;*/
+											/*margin-right: 44px!important;*/
+										font-size:14px!important;
+				}
+				.k-pc-product-cart-totals{
+					font-size:14px!important;
+					position: relative;
+				}
+
+				.k-pc-product-actions{
+					padding: 10px 0;
+					/*border-bottom: 1px solid #e0e0e0;*/
+				}
+
+				.k-pc-product-actions ul{
+					list-style: none;
+					padding: 0;
+					margin:0;
+					text-align:center;
+				}
+
+				.k-pc-product-actions ul li{
+					display: inline-block;
+					vertical-align: middle;
+					width: 28.80%;
+				}
+
+				.k-pc-product-actions a{
+					width: 100%;
+					border-radius: px;
+					background: black;
+										color: black;
+					background: white;
+										
+					border: 1px solid black;
+					padding: .4em 1.5em .4em;
+					text-decoration: none;
+					display: inline-block;
+					transition: all ease .3s;
+					margin-bottom: 15px;
+					font-weight: 600;
+					font-size: 16px;
+					line-height: 26px;
+					text-align: center;
+				}
+
+				.k-pc-related-products h3,
+				.layout-three .k-pc-product-cart-info h3{
+					  text-align: center;
+					text-transform: uppercase;
+					font-size: 16px;
+					margin-top: 0;
+					margin-bottom: 20px;
+					line-height: 26px;
+					color: #404040;
+					font-weight: 700;
+				}
+
+				.close-btn{
+									color: black !important;
+					background-color: #eeeeee!important;
+									position: absolute;
+					top: 15px;
+					background-color: #eeeeee !important;
+					font-weight: 600;
+					right: 15px;
+					padding: 6px 11px;
+					font-size: 12px;
+					line-height: 22px;
+					border: 0px;
+					border: none;
+					transition-duration: 0.4s;
+					text-decoration: none;
+					overflow: hidden;
+				}
+				.message_icon_style{
+					width: 20px;
+					height: 20px;
+					position: absolute;
+					left: 0;
+										top: 3px;
+					bottom: auto;
+					overflow: hidden;
+					box-sizing: border-box;
+
+				}
+
+
+				.k-pc-product-cart-shipping{
+					width: 100%;
+					display: table;
+					position: relative;
+				}
+
+				.k-pc-product-cart-info p{
+					display: table-row;
+					width: 100%;
+				}
+
+				.k-pc-product-cart-shipping label{
+					display: table-cell;
+					vertical-align: middle;
+					text-align: left;
+					width: 65%
+				}
+
+				.k-pc-product-cart-shipping .shipping_fee_style_custom {
+					display: table-cell;
+					vertical-align: middle;
+					width: 35%;
+					text-align: right;
+				}
+				.shipping_fee_style_custom .woocommerce-Price-amount{
+								font-size:14px!important;
+					
+				}
+				.layout-three .k-pc-product-cart-shipping p span,
+				.layout-two .k-pc-product-cart-shipping p span{
+					text-align: right;
+					float: right;
+				}
+
+				.layout-three .woocommerce-Price-currencySymbol,
+				.layout-two .woocommerce-Price-currencySymbol{
+					float: none !important;
+				}
+
+				.layout-three .tax_label,
+				.layout-one .tax_label{
+					position: absolute;
+					right: 85px;
+					top: 4px;
+				}
+
+
+				.layout-two .tax_label{
+					position: absolute;
+					right: -48px;
+					top: 3px;
+				}
+					
+		/*complete css od model*/
+		@media screen and (max-width: 480px) {
+				.my-modal-box {
+										background-color: white;
+										width: 100%;
+					height: 100%;
+					position: absolute;
+					box-sizing: border-box;
+					overflow: auto;
+					padding: 10px;
+				}
+			
+
+				.kpc-col-1,
+				.kpc-col-2,
+				.kpc-col-3,
+				.kpc-col-4,
+				.kpc-col-5,
+				.kpc-col-6,
+				.kpc-col-7,
+				.kpc-col-8,
+				.kpc-col-9,
+				.kpc-col-10,
+				.kpc-col-11,
+				.kpc-col-12{
+					width: 100%;
+				}
+
+				.k-pc-product-actions ul li{
+					width:48% !important;
+				}
+
+
+				.k-pc-product-title-info h3 {
+								}
+
+				.k-pc-product-price-info span,
+				.shrt_dis_style{
+					font-size: 14px !important;
+					line-height: 24px !important;
+				}
+				.k-pc-product-cart-info p label{
+								}
+
+				.k-pc-product-cart-shipping p span,
+				.k-pc-product-cart-info p label,
+				.k-pc-product-cart-info p .woocommerce-Price-amount,
+				.k-pc-product-cart-totals .woocommerce-Price-currencySymbol{
+					font-size: 12px !important;
+					line-height: 22px !important;
+				}
+
+				.k-pc-product-actions a {
+					padding: 5px 10px !important;
+					font-size: 12px !important;
+					line-height: 22px !important;
+				}
+
+
+				.layout-three .k-pc-product-cart-info{
+					margin:0px !important;
+					padding:0px !important;
+				}
+				.k-pc-product-cart-info p label{
+								}
+				/*coloring*/
+				.suggested_title_color{
+					
+				}
+									.message_text_color {
+										padding: 5px 9px;
+					position: relative;
+					text-align: left;
+					border-radius: 4px;
+					margin-bottom: 10px;
+					margin-top: 24px;
+				}
+								.message_span_style{
+					position: relative;
+					box-sizing: border-box;
+					width: 100%;
+					display: block;
+					font-size: 14px;
+					line-height: 24px;
+					letter-spacing: 0px;
+					font-weight: 600;
+					padding-left: 28px;
+				}
+				.header_bar{
+					width:100%;
+					height:45px;
+					padding: 5px;
+					background-color:#0087eb;
+					text-align: right;
+				}
+				.custom_admin_color{
+									color:#FFFFFF;
+					background:#000000;
+								}
+				.custom_admin_color_view_cart{
+									color:#FFFFFF;
+					background:#000000;
+								}
+				.title{
+								}
+				.shipping_fee_style_custom {
+					
+				}
+				.shipping_fee_style_custom .woocommerce-Price-amount{
+									
+				}
+				.product_detail{
+									background-color:white;
+									
+				}
+				.cart_fee{
+								}
+				.tr_bg_c{
+					background-color:!important;
+				}
+				.cart_total{
+								}
+				.price_cart_total{
+					display: flex;
+					font-size:  20px;
+					float: right;
+					right: 0;
+					font-size:14px!important;
+				}
+				.hr_style{
+					width: 100%;
+					background:!important;
+					
+				}
+				.hr_style_header{
+					width: 100%;
+								}
+				.ancher_tag_view_cart{
+									color:#FFFFFF;
+					background:#000000;
+													color:#FFFFFF;
+					background:#000000
+								}
+				.total_custom_color{
+								}
+				.k-pc-product-title-info h3{
+									
+				}
+
+				.layout-two .k-pc-product-cart-info h4{
+								}
+
+				.k-pc-product-cart-info p{
+								}
+
+				.k-pc-product-cart-info p label{
+								}
+
+				.k-pc-product-actions a{
+										color: black;
+					background: white;
+									}
+				.close-btn{
+									color: black !important;
+					background-color: #eeeeee!important;
+								}
+				/*coloring close*/
+
+			}
+
+			@media all and (min-width: 481px) and (max-width: 768px) {
+
+				.k-pc-product-title-info h3 {
+					font-size: 20px !important;
+					line-height: 30px !important;
+								}
+
+				.k-pc-product-price-info span,
+				.shrt_dis_style{
+					font-size: 14px !important;
+					line-height: 24px !important;
+				}
+
+				.k-pc-product-actions a {
+					padding: 5px 10px !important;
+					font-size: 14px !important;
+					line-height: 24px !important;
+				}
+
+				.k-pc-product-cart-shipping p span,
+				.k-pc-product-cart-info p label,
+				.k-pc-product-cart-info p .woocommerce-Price-amount,
+				.k-pc-product-cart-totals .woocommerce-Price-currencySymbol{
+					font-size: 12px !important;
+					line-height: 22px !important;
+				}
+				.k-pc-product-cart-info p label{
+								}
+
+				.layout-three .k-pc-product-cart-info{
+					margin:0px !important;
+					padding:0px !important;
+				}
+				/*colring start*/
+				.suggested_title_color{
+					
+				}
+									.message_text_color {
+										padding: 5px 9px;
+					position: relative;
+					text-align: left;
+					border-radius: 4px;
+					margin-bottom: 10px;
+					margin-top: 24px;
+				}
+								.message_span_style{
+					position: relative;
+					box-sizing: border-box;
+					width: 100%;
+					display: block;
+					font-size: 14px;
+					line-height: 24px;
+					letter-spacing: 0px;
+					font-weight: 600;
+					padding-left: 28px;
+				}
+				.header_bar{
+					width:100%;
+					height:45px;
+					padding: 5px;
+					background-color:#0087eb;
+					text-align: right;
+				}
+				.custom_admin_color{
+									color:#FFFFFF;
+					background:#000000;
+								}
+				.custom_admin_color_view_cart{
+									color:#FFFFFF;
+					background:#000000;
+								}
+				.title{
+								}
+				.shipping_fee_style_custom {
+					
+				}
+				.shipping_fee_style_custom .woocommerce-Price-amount{
+								}
+				.product_detail{
+									background-color:white;
+								}
+				.cart_fee{
+								}
+				.tr_bg_c{
+					background-color:!important;
+				}
+				.cart_total{
+								}
+				.price_cart_total{
+					display: flex;
+					font-size:  20px;
+					float: right;
+					right: 0;
+					font-size:14px!important;
+				}
+				.hr_style{
+					width: 100%;
+					background:!important;
+					
+				}
+				.hr_style_header{
+					width: 100%;
+								}
+				.ancher_tag_view_cart{
+									color:#FFFFFF;
+					background:#000000;
+								}
+				.total_custom_color{
+								}
+				.k-pc-product-title-info h3{
+								}
+
+				.layout-two .k-pc-product-cart-info h4{
+								}
+
+				.k-pc-product-cart-info p{
+								}
+
+				.k-pc-product-cart-info p label{
+								}
+
+				.k-pc-product-actions a{
+										color: black;
+					background: white;
+									}
+				.close-btn{
+									color: black !important;
+					background-color: #eeeeee!important;
+							}
+				/*coloring end*/
+		}
+				
+</style>
+						<script type="text/javascript">
+           var ajaxurl = "https://www.francisfordcoppolawinery.com/wp-admin/admin-ajax.php";
+         </script>	<style>img#wpstats{display:none}</style>
+				<script async src="https://apps.bazaarvoice.com/deployments/coppola/main_site/production/en_US/bv.js"></script>
+	<style>
+	.woocommerce button[name="update_cart"],
+	.woocommerce input[name="update_cart"] {
+		display: none;
+	}</style>	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style id='wp-fonts-local' type='text/css'>
+@font-face{font-family:FinancierDisplay;font-style:normal;font-weight:400;font-display:swap;src:url('https://www.francisfordcoppolawinery.com/wp-content/themes/francis-ford-coppola/assets/fonts/FinancierDisplay-Regular.woff') format('woff');}
+@font-face{font-family:FinancierDisplay;font-style:oblique;font-weight:400;font-display:swap;src:url('https://www.francisfordcoppolawinery.com/wp-content/themes/francis-ford-coppola/assets/fonts/FinancierDisplay-RegularItalic.woff') format('woff');}
+@font-face{font-family:FinancierDisplay;font-style:normal;font-weight:600;font-display:swap;src:url('https://www.francisfordcoppolawinery.com/wp-content/themes/francis-ford-coppola/assets/fonts/FinancierDisplay-Semibold.woff') format('woff');}
+@font-face{font-family:FinancierDisplay;font-style:oblique;font-weight:600;font-display:swap;src:url('https://www.francisfordcoppolawinery.com/wp-content/themes/francis-ford-coppola/assets/fonts/FinancierDisplay-Semibold-Italic.woff') format('woff');}
+@font-face{font-family:FinancierDisplay;font-style:normal;font-weight:700;font-display:swap;src:url('https://www.francisfordcoppolawinery.com/wp-content/themes/francis-ford-coppola/assets/fonts/FinancierDisplay-Bold.woff2') format('woff2');}
+</style>
+<link rel="icon" href="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/favicon.jpg?w=32" sizes="32x32" />
+<link rel="icon" href="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/favicon.jpg?w=48" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/favicon.jpg?w=48" />
+<meta name="msapplication-TileImage" content="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/favicon.jpg?w=48" />
+		<style type="text/css" id="wp-custom-css">
+			section.ft-large-overlay-cards.ft-blocks > div > div:last-of-type {
+	justify-content: center;
+}
+
+#menu-item-4625 {
+    line-height: 1.1;
+}
+
+#menu-item-4625 > a > span {
+    font-size: 0.675rem;
+}
+
+section.ft-full-height-hero-block {
+	position: relative;
+}
+
+body.page-id-8225 section.ft-full-height-hero-block > div {
+	position: relative;
+	background-color: #ACACAC;
+}
+
+body.page-id-8225 section.ft-full-height-hero-block > div > img {
+	max-width: 400px;
+    width: 30%;
+	position: absolute;
+	left: 1%;
+	top: 9rem;
+}
+
+body.page-id-8225 section.ft-full-height-hero-block > div h1 {
+	display: none;
+}
+
+body.page-id-8225 section.ft-video {
+	background-color: black;
+	
+}
+
+body.page-id-8225 h2.text-white, body.page-id-8225 .text-white > p {
+	color: #ACACAC;
+}
+
+body.page-id-8225 div.block-quote {
+	background-blend-mode: normal;
+}
+
+body.page-id-8225 div.block-quote blockquote::after {
+	background: black;
+}
+
+body.page-id-8225 section.ft-large-title-block {
+	margin-bottom: 0;
+}
+
+body.page-id-8225 section.ft-large-title-block > div {
+	background-blend-mode: normal;
+	background-size: 33%;
+}
+
+.n2_ss_slider_frame_container, .n2-section-smartslider {
+	padding: 3rem 0;	
+	background-color: black;
+}
+
+#pizza-line {
+	display: none;
+}
+
+div.bv-inline {
+	margin-bottom: 10px;
+}
+
+div.bv-summary {
+	margin: -10px auto 30px;
+}
+
+#BVRRContainer h2.bv-action-bar-header {
+	font-size: 3.75rem !important;
+}
+
+body.page-id-11882 section.ft-image-cards > div > ul {
+	  max-width: 1140px;
+    margin: 0 auto !important;
+}
+
+body.page-id-11882 section.ft-video > div {
+	margin-top: 0;
+}
+
+body.page-id-11882 section.ft-video > div > div.w-5\/6 {
+	max-width: 900px;
+}
+
+div.newsletter-signup h2 {
+	margin-top: 40px;
+}
+
+div.newsletter-signup > div {
+	padding: 40px 0;
+	background: white;
+}
+
+div.newsletter-signup > div .bLoyal-snippet-container .bLoyal-form {
+	width: 100%;
+}
+
+div.newsletter-signup > div .bLoyal-snippet-container .bLoyal-form form {
+	text-align: left;
+}
+
+div.newsletter-signup > div .bLoyal-snippet-container .bLoyal-input-holder {
+	width: calc(100% - 20px);
+	margin: 0;
+}
+
+div.newsletter-signup > div .bLoyal-snippet-container .bLoyal-input-holder label {
+	text-align: left;
+	display: inline-block;
+   width: 100%;
+}
+
+div.newsletter-signup > div .bLoyal-snippet-container .bLoyal-input-holder label input, div.newsletter-signup > div .bLoyal-snippet-container .bLoyal-input-holder label select {
+	margin-bottom: 20px;
+}
+
+div.newsletter-signup > div .bLoyal-snippet-container button {
+	margin: 10px 0;
+}
+
+.entry-content--simple-page .wp-block-buttons > .wp-block-button a.wp-block-button__link {
+	text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+	div.newsletter-signup > div .wp-block-media-text__media img {
+		margin: 0 auto 40px;
+		max-width: 400px;
+	}
+}
+
+@media (min-width: 1024px) {
+	body.page-id-8225 .lg\:from-deep-green {
+		--tw-gradient-from: #000000 var(--tw-gradient-from-position);
+	}
+	
+	body.page-id-8225 .lg\:to-tan {
+		--tw-gradient-to: #ffffff var(--tw-gradient-to-position);
+	}
+}
+
+@media screen and (max-width: 30rem) {
+	body.page-id-8225 section.ft-full-height-hero-block > div > img {
+		    position: absolute;
+    bottom: 0;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    opacity: 0.6;
+    top: inherit;
+    width: 30%;
+	}
+}		</style>
+		</head>
+
+<body style="background-color:#FFFFFF" class="product-template-default single single-product postid-4508 wp-custom-logo font-sans antialiased theme-ft-base-theme woocommerce woocommerce-page woocommerce-no-js">
+    
+         <script>
+(function(d){
+  console.log('redchirp: pixel script start');
+  var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+  p.type = 'text/javascript';
+  p.setAttribute('charset','utf-8');
+  p.async = true;
+  p.id = "your-widget";
+  
+  var meta_ref_url = document.querySelector('meta[name="redchirp-referring-url"]');
+  var meta_inbox_ids = document.querySelector('meta[name="redchirp-inbox-ids"]');
+
+  var query_string = '?ref='+encodeURIComponent(meta_ref_url == null ? window.location : meta_ref_url.content);
+
+  if ( meta_inbox_ids != null )
+    query_string += '&inbox_ids='+encodeURIComponent(meta_inbox_ids.content);
+
+  p.src = "https://app.redchirp.com/api/v1/widget/widget-loader.js"+query_string;
+  f.parentNode.insertBefore(p, f);
+}(document));
+</script>
+ 
+        
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWBRKMPV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+<div id="page" class="min-h-screen flex flex-col">
+  
+  <header class="sticky z-[100] top-0 left-0 text-black bg-white border-b border-grey-700 border-solid shadow-md shadow-black/50 group-data-[scroll=&quot;0&quot;]/html:shadow-none top-0" data-module="Header">
+	<button id="skip-to-content" class="absolute z-[101] top-[-9999px] left-[-9999px] p-4 bg-white border-black border-2 border-solid text-black text-sm font-semibold focus:top-0 focus:left-0">Skip to main content</button>
+	<div class="relative px-4">
+		<div class="grid grid-cols-12">
+			<div class="flex col-span-4 gap-5 justify-start items-center sm:gap-8 lg:col-span-2 no-print">
+				<div class="mobile-nav" data-module="MobileNav">
+	<!-- hamburger button -->
+	<button id="menu-toggle" class="mobile-nav-toggle wc-page-alt" aria-expanded="false" aria-controls="menu" data-action="click">
+		<span class="sr-only">Menu</span>
+		<div class="line" data-name="line1"></div>
+		<div class="line" data-name="line2"></div>
+	</button>
+	<!-- mobile header menu -->
+	<ul class="mobile-nav-list hidden" id="menu" data-name="menu">
+								<li class="menu-list-item mobile-link has-dropdown">
+				<a class="top-level-nav" href="https://www.francisfordcoppolawinery.com/store/" >
+					<span class="nav-link-text">Shop</span>
+				</a>
+				<button class="nav-mobile-dropdown hidden" data-action="mobileDropdown">
+					<i class="dropdown-icon text-white fa-solid fa-chevron-down fa-xl"></i>
+					<span class="sr-only">Show sub menu</span>
+				</button>
+									<div class="mobile-nav-dropdown hidden">
+						<ul class="list-none">
+														<li class="block w-full h-full p-0">
+								<a href="https://www.francisfordcoppolawinery.com/product-category/wine/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Wine</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="https://www.francisfordcoppolawinery.com/product-category/food/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Food</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="https://www.francisfordcoppolawinery.com/product-category/gifts/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Gifts</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="https://www.francisfordcoppolawinery.com/product-category/tabletop-kitchen/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Tabletop &amp; Kitchen</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="https://www.francisfordcoppolawinery.com/product-category/cinema/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Cinema</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="https://www.francisfordcoppolawinery.com/product-category/gift-cards/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Gift Cards</span>
+																	</a>
+							</li>
+													</ul>
+					</div>
+							</li>
+								<li class="menu-list-item mobile-link has-dropdown">
+				<a class="top-level-nav" href="https://www.francisfordcoppolawinery.com/wineries/" >
+					<span class="nav-link-text">Wineries</span>
+				</a>
+				<button class="nav-mobile-dropdown hidden" data-action="mobileDropdown">
+					<i class="dropdown-icon text-white fa-solid fa-chevron-down fa-xl"></i>
+					<span class="sr-only">Show sub menu</span>
+				</button>
+									<div class="mobile-nav-dropdown hidden">
+						<ul class="list-none">
+														<li class="block w-full h-full p-0">
+								<a href="https://www.francisfordcoppolawinery.com/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Francis Ford Coppola Winery</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="https://www.francisfordcoppolawinery.com/membership/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Memberships</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="https://www.blackstallionwinery.com/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Black Stallion Winery</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="https://www.delicato.com/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Delicato Family Wines</span>
+																	</a>
+							</li>
+													</ul>
+					</div>
+							</li>
+								<li class="menu-list-item mobile-link has-dropdown">
+				<a class="top-level-nav" href="#" >
+					<span class="nav-link-text">Food</span>
+				</a>
+				<button class="nav-mobile-dropdown hidden" data-action="mobileDropdown">
+					<i class="dropdown-icon text-white fa-solid fa-chevron-down fa-xl"></i>
+					<span class="sr-only">Show sub menu</span>
+				</button>
+									<div class="mobile-nav-dropdown hidden">
+						<ul class="list-none">
+														<li class="block w-full h-full p-0">
+								<a href="https://www.francisfordcoppolawinery.com/dine-at-the-winery/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Rustic, Francis&#039;s Favorites</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="https://www.francisfordcoppolawinery.com/visit/pools-and-cabines#cafe"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Pool Café</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="https://www.francisfordcoppolawinery.com/perfect-your-pizza/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Perfect Your Pizza</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="https://www.francisfordcoppolawinery.com/coppolafeast/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Coppola Feast</span>
+																	</a>
+							</li>
+													</ul>
+					</div>
+							</li>
+								<li class="menu-list-item mobile-link">
+				<a class="top-level-nav" href="https://www.francisfordcoppolawinery.com/my-account/" >
+					<span class="nav-link-text">My Account</span>
+				</a>
+				<button class="nav-mobile-dropdown hidden" data-action="mobileDropdown">
+					<i class="dropdown-icon text-white fa-solid fa-chevron-down fa-xl"></i>
+					<span class="sr-only">Show sub menu</span>
+				</button>
+							</li>
+								<li class="menu-list-item mobile-link has-dropdown">
+				<a class="top-level-nav" href="https://www.francisfordcoppolawinery.com/contact-us/" >
+					<span class="nav-link-text">Contact Us</span>
+				</a>
+				<button class="nav-mobile-dropdown hidden" data-action="mobileDropdown">
+					<i class="dropdown-icon text-white fa-solid fa-chevron-down fa-xl"></i>
+					<span class="sr-only">Show sub menu</span>
+				</button>
+									<div class="mobile-nav-dropdown hidden">
+						<ul class="list-none">
+														<li class="block w-full h-full p-0">
+								<a href="tel:7078571484"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">(707) 857-1484</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="#"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Mon-Fri, 7:00am-3:30pm, PT</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="mailto:service@francisfordcoppolawinery.com"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Email Us</span>
+																	</a>
+							</li>
+													</ul>
+					</div>
+							</li>
+								<li class="menu-list-item mobile-link has-dropdown">
+				<a class="top-level-nav" href="#" >
+					<span class="nav-link-text">Quick Help</span>
+				</a>
+				<button class="nav-mobile-dropdown hidden" data-action="mobileDropdown">
+					<i class="dropdown-icon text-white fa-solid fa-chevron-down fa-xl"></i>
+					<span class="sr-only">Show sub menu</span>
+				</button>
+									<div class="mobile-nav-dropdown hidden">
+						<ul class="list-none">
+														<li class="block w-full h-full p-0">
+								<a href="https://www.francisfordcoppolawinery.com/store/shipping-and-returns/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Shipping and Returns</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="https://www.delicato.com/privacy-policy/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Privacy Policy</span>
+																	</a>
+							</li>
+														<li class="block w-full h-full p-0">
+								<a href="https://www.francisfordcoppolawinery.com/terms-of-use/"  class="block w-full h-full !pl-4">
+																			<span class="first-line !text-base">Terms of Use</span>
+																	</a>
+							</li>
+													</ul>
+					</div>
+							</li>
+			</ul>
+</div>
+				  <div class="header-search" data-module="SearchBox">
+    <button data-name="searchButton" data-action="toggleSearch" aria-label="Toggle search" aria-expanded="false" aria-controls="searchForm" tabindex="0">
+      
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" class="mt-1 w-10" style="enable-background:new 0 0 40 50" viewBox="0 0 40 50" aria-hidden="true" focusable="false"><g transform="translate(2 2)"><circle cx="15.5" cy="21" r="11" style="fill:none;stroke:currentColor;stroke-width:4"/><path d="m25.8 32.1 2-2c1.1.5 2 1.2 2.8 2 .7.7 1.2 2 2 2.8.6.6-1.4 2.6-2 2-.8-.8-1.6-.8-2.8-2-.7-.8-1.4-1.7-2-2.8z" fill="currentColor" style="fill-rule:evenodd;clip-rule:evenodd"/></g></svg>
+    </button>
+
+    <div class="absolute top-full right-0 left-0 hidden p-4 w-full bg-white text-black shadow-md shadow-black/25" data-name="searchFields">
+      <div class="mx-auto max-w-[600px] w-full">
+        <div class="mx-auto w-full max-w-[540px]"><div class="aws-container" data-url="/?wc-ajax=aws_action" data-siteurl="https://www.francisfordcoppolawinery.com" data-lang="" data-show-loader="true" data-show-more="true" data-show-page="true" data-ajax-search="true" data-show-clear="true" data-mobile-screen="false" data-use-analytics="false" data-min-chars="1" data-buttons-order="1" data-timeout="300" data-is-mobile="false" data-page-id="4508" data-tax="" ><form class="aws-search-form" action="https://www.francisfordcoppolawinery.com/" method="get" role="search" ><div class="aws-wrapper"><label class="aws-search-label" for="66c5f28064ca1">Search</label><input type="search" name="s" id="66c5f28064ca1" value="" class="aws-search-field" placeholder="Search" autocomplete="off" /><input type="hidden" name="post_type" value="product"><input type="hidden" name="type_aws" value="true"><div class="aws-search-clear"><span>×</span></div><div class="aws-loader"></div></div></form></div></div>
+      </div>
+    </div>
+  </div>
+			</div>
+			<div class="hidden col-span-3 justify-end items-center lg:flex">
+					<div id="left-menu" class="bg-gray-100 mt-4 p-4 h-full lg:mt-0 lg:p-0 lg:bg-transparent max-lg:hidden"><ul id="menu-left-menu" class="header-menu h-full lg:flex lg:-mx-4"><li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children current_page_parent menu-item-94 h-full lg:mx-4"><a href="https://www.francisfordcoppolawinery.com/store/" data-action-type="mouseover" data-action="openDropdown">Shop</a>
+<ul class="sub-menu">
+	<li id="menu-item-4611" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat current-product-ancestor current-menu-parent current-product-parent menu-item-4611 h-full lg:mx-4"><a href="https://www.francisfordcoppolawinery.com/product-category/wine/">Wine</a></li>
+	<li id="menu-item-4612" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-4612 h-full lg:mx-4"><a href="https://www.francisfordcoppolawinery.com/product-category/gifts/">Gifts</a></li>
+	<li id="menu-item-4613" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-4613 h-full lg:mx-4"><a href="https://www.francisfordcoppolawinery.com/product-category/tabletop-kitchen/">Tabletop &amp; Kitchen</a></li>
+	<li id="menu-item-4614" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-4614 h-full lg:mx-4"><a href="https://www.francisfordcoppolawinery.com/product-category/food/">Food</a></li>
+	<li id="menu-item-4615" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-4615 h-full lg:mx-4"><a href="https://www.francisfordcoppolawinery.com/product-category/cinema/">Cinema</a></li>
+	<li id="menu-item-5643" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-5643 h-full lg:mx-4"><a href="https://www.francisfordcoppolawinery.com/store/gift-cards/">Gift Cards</a></li>
+</ul>
+</li>
+<li id="menu-item-4618" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4618 h-full lg:mx-4"><a href="https://www.francisfordcoppolawinery.com/wineries/" data-action-type="mouseover" data-action="openDropdown">Wineries</a>
+<ul class="sub-menu">
+	<li id="menu-item-4622" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4622 h-full lg:mx-4"><a href="/">Francis Ford Coppola Winery</a></li>
+	<li id="menu-item-4619" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4619 h-full lg:mx-4"><a href="https://www.francisfordcoppolawinery.com/membership/">Memberships</a></li>
+	<li id="menu-item-4620" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4620 h-full lg:mx-4"><a target="_blank" rel="noopener" href="https://www.blackstallionwinery.com/">Black Stallion Winery</a></li>
+	<li id="menu-item-4621" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4621 h-full lg:mx-4"><a target="_blank" rel="noopener" href="https://www.delicato.com/">Delicato Family Wines</a></li>
+</ul>
+</li>
+</ul></div>			</div>
+			<div class="relative z-50 col-span-4 py-4 lg:col-span-2 no-print">
+																	<a href="https://www.francisfordcoppolawinery.com" aria-label="Francis Ford Coppola Winery Home">
+							<img src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/ffcw-text-alt.png" class="mx-auto" alt="" />
+						</a>
+								</div>
+			<div class="hidden col-span-3 justify-start items-center lg:flex">
+					<div id="right-menu" class="hidden bg-gray-100 mt-4 p-4 h-full lg:mt-0 lg:p-0 lg:bg-transparent lg:block"><ul id="menu-right-menu" class="header-menu h-full lg:flex lg:-mx-4"><li id="menu-item-97" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-97 h-full lg:mx-4"><a href="#" data-action-type="mouseover" data-action="openDropdown">Food</a>
+<ul class="sub-menu">
+	<li id="menu-item-4625" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4625 h-full lg:mx-4"><a href="https://www.francisfordcoppolawinery.com/dine-at-the-winery/">Rustic at Francis Ford Coppola Winery<br><span>Wine Country Dining Experience</span></a></li>
+	<li id="menu-item-4624" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4624 h-full lg:mx-4"><a href="/visit/pools-and-cabines#cafe">Pool Café</a></li>
+	<li id="menu-item-4623" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4623 h-full lg:mx-4"><a href="https://www.francisfordcoppolawinery.com/perfect-your-pizza/">Perfect Your Pizza</a></li>
+	<li id="menu-item-12113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12113 h-full lg:mx-4"><a href="/coppolafeast/">Coppola Feast</a></li>
+</ul>
+</li>
+</ul></div>			</div>
+			<div data-module="AddToCart" class="flex gap-4 col-span-4 justify-end items-center lg:col-span-2 no-print">
+								<div class="relative h-full max-lg:hidden">
+					<a href="https://www.francisfordcoppolawinery.com/my-account/"
+						title="My Account"
+						class="flex items-center h-full text-xs peer">My Account					</a>
+										<div class="absolute top-full right-0 hidden p-7 bg-black text-white w-auto peer-hover:block hover:block">
+						<ul>
+							<li>
+								<a href="https://www.francisfordcoppolawinery.com/my-account/" class="whitespace-nowrap">Sign In</a>
+							</li>
+						</ul>
+					</div>
+									</div>
+												<div class="relative h-full max-lg:hidden">
+					<span class="flex items-center h-full cursor-pointer peer" tabindex="0">
+					<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" class="w-10" version="1.1" viewBox="0 0 40 50">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #000;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="M26.8,38c5.7,0,8.6-2.6,8.6-8.7v-9.5c0-5.2-1.9-7.8-8.6-7.8h-10.4c-5.7,0-7.6,3.5-7.6,7.8s0,5.6-1,10.4c-.6,2.1-1.8,4-3.5,5.3-.4.3-.3,1,.3,1.1,4.5.8,8.6,1.3,13,1.3h9.2Z"/>
+  <path class="cls-1" d="M21.7,27.6v-.2c0-2.7,2.2-2.4,2.2-6.7s-.7-4-2.2-4-1.9,1.2-1.9,2.6.3,1.4.3,2c0,.9-.8,1.7-1.9,1.7s-2-.9-2-2.2c0-2.3,2.5-4.7,6.5-4.7,3.8,0,6,1.6,6,4.1s-1,2.9-2.8,4c-2.7,1.7-3.1,2.2-3.3,3.4h-.7ZM22.2,29.2c1.3,0,2.4,1.1,2.4,2.4s-1.1,2.4-2.4,2.4-2.4-1.1-2.4-2.4,1.1-2.4,2.4-2.4Z"/>
+</svg>
+					</span>
+					<div class="absolute top-[-9999px] right-0 p-7 bg-black text-white w-auto peer-hover:top-full peer-focus:top-full hover:top-full focus-within:top-full">
+						<div class="mb-3">
+							<h2 class="mb-3 text-2xl text-white font-heading">Contact Us</h2>
+                            <p class="mb-1 text-sm">Online Store Customer Service<br />
+(707) 857-1484<br />
+M-F 7:00am-3:30pm PT<br />
+<a style="text-decoration:underline" href="mailto:service@francisfordcoppolawinery.com">service@francisfordcoppolawinery.com</a><br />
+<br />
+Wine Family<br />
+(707) 857-1436<br />
+M-F 8:00am-4:00pm PT<br />
+<a style="text-decoration:underline" href="mailto:membership@francisfordcoppolawinery.com">membership@francisfordcoppolawinery.com</a><br />
+</p>
+							<!--p class="mb-1 text-sm">(707) 857-1484</p>
+							<p class="text-sm">Mon-Fri, 7:00am-3:30pm, PT</p>
+							<a class="text-xs underline" href="mailto:service@francisfordcoppolawinery.com">service@francisfordcoppolawinery.com</a-->
+						</div>
+						<div>
+							<h2 class="text-2xl text-white font-heading mb-3">Quick Help</h2>
+							<div id="quick-help-menu" class="menu-quick-help-container"><ul id="menu-quick-help" class="flex flex-col gap-y-4 text-xs underline"><li id="menu-item-233" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-233"><a href="/store/shipping-and-returns/">Shipping and Returns</a></li>
+<li id="menu-item-234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-234"><a href="https://www.delicato.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-235" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-235"><a href="/terms-of-use/">Terms of Use</a></li>
+</ul></div>						</div>
+					</div>
+				</div>
+								<button id="wc-cart-button" class="relative cursor-pointer" tabindex="0" data-name="cartButton" data-action="setFocus">
+					<p class="absolute top-1/2 left-1.5 text-black leading-none bg-[#eec474] rounded-[20px] text-[0.6875rem] font-sans font-semibold py-[3px] px-[5px] -mt-[5px] z-10"><span id="wc-cart-count">0</span></p>
+					<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" class="w-10" style="enable-background:new 0 0 40 50" viewBox="0 0 40 50"><path d="M11 14h18l-1 26c-3.6-.3-6.2-.5-8-.5s-4.4.2-8 .5l-1-26z" fill="currentColor" style="fill-rule:evenodd;clip-rule:evenodd" transform="translate(0 2)"/><path d="M15.5 16.5v-6a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v6" fill="none" stroke="currentColor" stroke-width="3" transform="translate(0 2)"/></svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</header>
+
+	<div id="site-content" class="site-content flex-grow" tabindex="-1">
+
+			
+			<main>
+
+	<div id="primary" class="content-area"><main id="main" class="site-main" role="main">
+					
+			<style>
+	.wc-variable-product-cart, .woo-product-gallery-slider .wpgs-nav .slick-current img, .woosw-btn-icon, .single_variation_wrap .wc-quantity-wrapper {
+		color: #000;
+		border-color: #000;
+		stroke: #000;
+	}
+</style>
+<div id="product-hero" class="pb-7" style="background-color:#eac0b0;color:#000">
+	<div class="grid grid-cols-12 gap-0 py-8 px-4 sm:py-16 sm:px-20 lg:gap-x-10">
+		<div class="col-span-12 lg:col-span-6">
+						<div class="relative block lg:hidden">
+						<div class="absolute top-0 right-0 text-2xl">
+			<button class="woosw-btn woosw-btn-4508 woosw-btn-has-icon woosw-btn-icon-only" data-id="4508" data-product_name="Sofia Rosé" data-product_image="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png?w=150&amp;h=150&amp;crop=1" aria-label="Add to wishlist"><span class="woosw-btn-icon woosw-icon-5"></span></button>			</div>
+						<div class="pr-12 pb-8 font-bold"><p class="text-sm"></p><h1 class="product_title entry-title text-4xl font-heading leading-none sm:text-[60px]">Sofia Rosé</h1></div>			</div>
+			<div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images" data-columns="4" style="opacity: 0; transition: opacity .25s ease-in-out;">
+	<div class="woocommerce-product-gallery__wrapper">
+		<div data-thumb="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png?w=100" data-thumb-alt="" class="woocommerce-product-gallery__image"><a href="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png"><img width="900" height="900" src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png?w=900" class="wp-post-image" alt="" title="Sofia_Rose_Relaunch-h" data-caption="" data-src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png" data-large_image="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png" data-large_image_width="975" data-large_image_height="975" decoding="async" fetchpriority="high" srcset="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png 975w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png?resize=150,150 150w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png?resize=300,300 300w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png?resize=768,768 768w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png?resize=900,900 900w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png?resize=100,100 100w" sizes="(max-width: 900px) 100vw, 900px" /></a></div>	</div>
+</div>
+<div class="palate-profile mb-5 max-lg:text-center">
+		<h2 class="mb-2 text-3xl font-heading">Taste Profile</h2>
+			<div class="flex flex-wrap gap-5 max-lg:justify-center">
+				<figure class="w-min min-w-[64px]">
+			<img src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/10/winery_icons-apple.png" width="64" height="64" class="mx-auto rounded-full bg-black w-16 h-16" />
+			<figcaption class="mt-2 text-center text-[0.625rem] font-bold uppercase">Apple</figcaption>
+		</figure>
+				<figure class="w-min min-w-[64px]">
+			<img src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/10/winery_icons-graphite.png" width="64" height="64" class="mx-auto rounded-full bg-black w-16 h-16" />
+			<figcaption class="mt-2 text-center text-[0.625rem] font-bold uppercase">Flint</figcaption>
+		</figure>
+				<figure class="w-min min-w-[64px]">
+			<img src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/10/winery_icons-cherry.png" width="64" height="64" class="mx-auto rounded-full bg-black w-16 h-16" />
+			<figcaption class="mt-2 text-center text-[0.625rem] font-bold uppercase">Red Cherry</figcaption>
+		</figure>
+				<figure class="w-min min-w-[64px]">
+			<img src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/10/winery_icons-tangerines.png" width="64" height="64" class="mx-auto rounded-full bg-black w-16 h-16" />
+			<figcaption class="mt-2 text-center text-[0.625rem] font-bold uppercase">Tangerine</figcaption>
+		</figure>
+			</div>
+	</div>
+		</div>
+		<div class="col-span-12 lg:col-span-6">
+			<div class="w-full xl:w-2/3">
+				<div class="relative hidden lg:block">
+								<div class="absolute top-0 right-0 text-3xl text-white">
+				<button class="woosw-btn woosw-btn-4508 woosw-btn-has-icon woosw-btn-icon-only" data-id="4508" data-product_name="Sofia Rosé" data-product_image="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/Sofia_Rose_Relaunch-h.png?w=150&amp;h=150&amp;crop=1" aria-label="Add to wishlist"><span class="woosw-btn-icon woosw-icon-5"></span></button>				</div>
+								<div class="pr-12 pb-8 font-bold"><p class="text-sm"></p><h1 class="product_title entry-title text-4xl font-heading leading-none sm:text-[60px]">Sofia Rosé</h1></div>				</div>
+                <div class="bv-summary" data-bv-show="rating_summary" data-bv-product-id="3302"></div>
+				<div class="wc-description text-sm leading-relaxed">
+					<p>Crisp natural acidity with flavors of red cherry, tangerine, apple, flint and aromatic notes of strawberry, blood orange and acacia.</p>
+<p>Francis Ford Coppola&#8217;s tribute to his only daughter. Sofia wines are delicious, refreshing, and fun.</p>
+<p>Sofia Rosé is a wine of unparalleled beauty.</p>
+				</div>
+				<div class="mt-10 mb-5">
+					<p class="price !font-heading text-4xl"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#036;</span>19.00</span></p>
+										<p class="mt-5 text-sm font-bold">Member Price</p>
+						<p class="price !font-heading text-3xl">$15.20</p>												<div class="text-sm"><p><a href="https://www.francisfordcoppolawinery.com/membership/join-our-wine-family/" target="_blank" rel="noopener">Not a Member? Join now!</a></p>
+</div>
+															</div>
+				<div class="mb-5">
+					
+	
+	<form class="cart grid grid-cols-12 gap-x-1 w-full mt-12" action="https://www.francisfordcoppolawinery.com/store/sofia-rose/" method="post" enctype='multipart/form-data'>
+						<div class="relative col-span-6">
+		<p class="absolute -top-6 left-0 text-sm font-bold">Quantity</p>
+		<div class="quantity" data-module="QuantityField">
+		<label class="sr-only" for="quantity_66c5f28078e35">Quantity</label>
+	<div class="wc-quantity-wrapper flex justify-between items-center border-2 border-solid">
+		<button class="quantity-amount-adjust px-2 py-3" data-action="decrease" aria-label="Decrease quantity">
+			<i class="fas fa-chevron-down fa-xs"></i>
+		</button>
+		<input
+			type="text"
+						id="quantity_66c5f28078e35"
+			class="input-text qty text bg-transparent border-none font-heading text-xl w-auto"
+			name="quantity"
+			value="1"
+			aria-label="Product quantity"
+			size="4"
+			min="1"
+			max="277"
+			data-name="quantityInput"
+		/>
+		<button class="quantity-amount-adjust px-2" data-action="increase" aria-label="Increase quantity">
+			<i class="fas fa-chevron-up fa-xs"></i>
+		</button>
+	</div>
+	</div>
+		</div>
+				<button type="submit" name="add-to-cart" value="4508" class="single_add_to_cart_button button alt !rounded-none !bg-black !text-sm !py-5 !px-4 col-span-6">Add to cart</button>
+
+						<div id="myModal" class="modal">
+				</div>
+					</form>
+
+	
+				</div>
+				<div data-module="ShareButton">
+	<button class="fancy-underline relative text-xs font-bold leading-none text-center fancy-underline--black" data-action="open" aria-controls="shareModal" aria-haspopup="true" tabindex="0">Share</button>
+	<div data-name="shareModal" class="fixed hidden bg-black bg-opacity-60 top-0 right-0 bottom-0 left-0 z-50 overflow-y-auto">
+		<div class="relative block top-72 max-w-[400px] p-8 w-full h-auto min-h-[auto] text-center bg-white my-0 mx-auto" id="shareModal" data-reveal="" role="dialog" aria-hidden="false" data-yeti-box="shareModal" data-resize="shareModal" data-n="e2d38q-n" tabindex="-1">
+				<h4 class="mb-4 text-black text-4xl font-heading">Share with a Friend</h4>
+				<ul class="flex justify-center items-center gap-x-4 text-dark-gold">
+						<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://https%3A%2F%2Fwww.francisfordcoppolawinery.com%2Fstore%2Fsofia-rose%2F&amp;quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&amp;quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x"></i><span class="sr-only">Share on Facebook</span></a></li>
+						<li>
+								<a href="https://twitter.com/intent/tweet?source=http://https%3A%2F%2Fwww.francisfordcoppolawinery.com%2Fstore%2Fsofia-rose%2F&amp;text=http://https%3A%2F%2Fwww.francisfordcoppolawinery.com%2Fstore%2Fsofia-rose%2F&amp;via=coppolawine" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+						</li>
+						<li><a href="http://pinterest.com/pin/create/button/?url=http://https%3A%2F%2Fwww.francisfordcoppolawinery.com%2Fstore%2Fsofia-rose%2F&amp;description=" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&amp;description=' +  encodeURIComponent(document.title)); return false;"><i class="fab fa-pinterest fa-2x" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+						</li>
+						<li><a href="mailto:?subject=&amp;body=URL" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&amp;body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a>
+						</li>
+				</ul>
+				<button class="absolute top-2 right-2" data-action="close" aria-label="Close reveal" type="button">
+						<img src="/wp-content/themes/francis-ford-coppola/assets/images/close-icon.svg" width="40" height="40" alt="Close" />
+				</button>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+		<div class="mx-auto p-5 w-[97.5%] bg-white text-black">
+				<h2 class="my-5 text-4xl text-center font-heading sm:text-6xl lg:mb-8">Wine Notes</h2>
+		<div data-module="TabbedContent">
+	<div class="mb-5 flex justify-center items-center max-lg:flex-col lg:gap-y-5 lg:gap-x-24" data-name="tabNavigation">
+			<button class="wine-notes-tab tab-button text-[1.375rem] text-dark-gold font-heading" data-action="toggleContent" data-slug="winemaker">Winemaker Notes</button>
+			<button class="wine-notes-tab tab-button text-[1.375rem] text-dark-gold font-heading" data-action="toggleContent" data-slug="vineyard">Vineyard Notes</button>
+		</div>
+	<div class="mx-auto pb-5 max-w-screen-xl text-center" data-name="tabContents">
+			<div class="tab-content hidden max-sm:text-xs max-sm:text-left" data-name="winemaker"><p>In creating Sofia Rosé, the grapes are harvested at a lower Brix to ensure the wine remains light in character, and pairs well with food. To achieve our signature elegant salmon pink hue, the grapes are held in the press for a short period of time until the juice has just the right amount of pigment. Each varietal offers its own unique color to the overall blend. To preserve the aromatic intensity, the wine is fermented at a cool temperature in stainless steel fermenters.</p>
+</div>
+			<div class="tab-content hidden max-sm:text-xs max-sm:text-left" data-name="vineyard"><p>The fruit for our Sofia Rosé is grown in Monterey County, an appellation known for its cool climate and diurnal temperature pattern, where warm daytime temperatures may drop nearly 50 degrees in the evening. This condition extends the growing season and helps the grapes to ripen slowly.</p>
+</div>
+		</div>
+</div>
+					</div>
+	</div>
+<div class="grid grid-cols-12 py-8 px-5" data-module="TabbedContent">
+	<div class="flex justify-center items-center col-span-12 text-white bg-wine-facts bg-center bg-cover lg:col-span-6">
+		<div class="flex flex-col justify-center items-start mx-auto py-10 w-[calc(100%-280px)] max-lg:items-center">
+			<h2 class="mb-8 text-4xl text-center font-heading sm:text-6xl lg:text-left">Wine Facts</h2>
+			<div class="flex gap-6 justify-center items-start max-sm:flex-col lg:flex-col" data-name="tabNavigation">
+								<button class="tab-button text-xl text-white font-heading sm:text-[1.375rem]" data-action="toggleContent" data-slug="taste">Taste Profile</button>
+								<button class="tab-button text-xl text-white font-heading sm:text-[1.375rem]" data-action="toggleContent" data-slug="blend">Blend</button>
+								<button class="tab-button text-xl text-white font-heading sm:text-[1.375rem]" data-action="toggleContent" data-slug="appellation">Appellation</button>
+							</div>
+		</div>
+	</div>
+	<div class="flex justify-center items-center col-span-12 pt-0 px-4 pb-0 lg:py-8 lg:pr-8 lg:pl-0 lg:col-span-6" data-name="tabContents">
+				<div class="tab-content flex flex-col justify-center items-center w-full h-full p-8 bg-tan" data-name="taste">
+			<h3 class="mb-2 sm:mb-5 text-[1.375rem] text-center font-heading sm:text-2xl sm:text-left">Enjoy the Scents and Flavors</h3>
+						<h4 class="mb-2 sm:mb-5 text-[1.375rem] font-heading sm:text-2xl">Scents</h4>
+			<div class="flex flex-wrap justify-center gap-2 mb-10 sm:gap-10">
+								<figure class="w-[84px] sm:w-[100px]">
+					<img src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/10/winery_icons-blood-orange.png" width="100" height="100" class="mx-auto w-[70px] h-[70px] rounded-full bg-black sm:w-[100px] sm:h-[100px]" alt="" />
+					<figcaption class="mt-2 text-center font-bold max-sm:text-sm">Blood Orange</figcaption>
+				</figure>
+								<figure class="w-[84px] sm:w-[100px]">
+					<img src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/10/winery_icons-strawberry.png" width="100" height="100" class="mx-auto w-[70px] h-[70px] rounded-full bg-black sm:w-[100px] sm:h-[100px]" alt="" />
+					<figcaption class="mt-2 text-center font-bold max-sm:text-sm">Strawberry</figcaption>
+				</figure>
+							</div>
+						<h4 class="mb-2 sm:mb-5 text-[1.375rem] font-heading sm:text-2xl">Flavors</h4>
+			<div class="flex flex-wrap justify-center gap-2 sm:gap-10">
+								<figure class="w-[84px] sm:w-[100px]">
+					<img src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/10/winery_icons-apple.png" width="100" height="100" class="mx-auto w-[70px] h-[70px] rounded-full bg-black sm:w-[100px] sm:h-[100px]" alt="" />
+					<figcaption class="mt-2 text-center font-bold max-sm:text-sm">Apple</figcaption>
+				</figure>
+								<figure class="w-[84px] sm:w-[100px]">
+					<img src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/10/winery_icons-graphite.png" width="100" height="100" class="mx-auto w-[70px] h-[70px] rounded-full bg-black sm:w-[100px] sm:h-[100px]" alt="" />
+					<figcaption class="mt-2 text-center font-bold max-sm:text-sm">Flint</figcaption>
+				</figure>
+								<figure class="w-[84px] sm:w-[100px]">
+					<img src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/10/winery_icons-cherry.png" width="100" height="100" class="mx-auto w-[70px] h-[70px] rounded-full bg-black sm:w-[100px] sm:h-[100px]" alt="" />
+					<figcaption class="mt-2 text-center font-bold max-sm:text-sm">Red Cherry</figcaption>
+				</figure>
+								<figure class="w-[84px] sm:w-[100px]">
+					<img src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/10/winery_icons-tangerines.png" width="100" height="100" class="mx-auto w-[70px] h-[70px] rounded-full bg-black sm:w-[100px] sm:h-[100px]" alt="" />
+					<figcaption class="mt-2 text-center font-bold max-sm:text-sm">Tangerine</figcaption>
+				</figure>
+							</div>
+					</div>
+				<div class="tab-content hidden bg-tan w-full h-full py-8 px-20" data-name="blend">
+			<div class="py-8 max-lg:flex max-lg:justify-center max-lg:items-start max-lg:gap-5">
+	<div class="w-full h-full max-w-[113px] max-h-[532px] lg:hidden" aria-hidden="true">
+	<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" class="" style="enable-background:new 0 0 532 113" viewBox="0 0 113 532"><path d="m104.1 165.3c-7-16-22-26.2-23.8-37.8-1.2-6.2-2-16-2.1-29.2-.3-21.4-.7-44.2-1.3-68.4l1.4-1.1c.5-.4.7-1 .7-1.6l-.2-15.7-.1-.5-.8-2.7 0-1.8a6 6-90 00-6-5.9l-30.7-0a6 6-90 00-6 5.9l-0 2.4-.8 2.1-.1.7-.3 15.5c-0 .6.3 1.2.7 1.6l1.4 1.2a7696 7696-90 01-1.5 68.3 220 220-90 01-1.9 29.2c-1.9 14-14.4 16.9-23.2 37.8a99.2 99.2-90 00-9 37.2l-0 318.5c-0 7 18.7 10.5 56 10.5s56-3.5 56-10.5l0-320.5c-1-12.8-3.8-24.5-8.4-35.2z" style="fill-rule:evenodd;clip-rule:evenodd"/></svg>
+	</div>
+	<div class="max-lg:hidden" aria-hidden="true">
+	<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" class="" style="enable-background:new 0 0 532 113" viewBox="0 0 532 113"><path d="M366.7 104.1c16-7 26.2-22 37.8-23.8 6.2-1.2 16-2 29.2-2.1 21.4-.3 44.2-.7 68.4-1.3l1.1 1.4c.4.5 1 .7 1.6.7l15.7-.2.5-.1 2.7-.8h1.8a6 6 0 0 0 5.9-6V41.2a6 6 0 0 0-5.9-6h-2.4l-2.1-.8-.7-.1-15.5-.3c-.6 0-1.2.3-1.6.7l-1.2 1.4a7696 7696 0 0 1-68.3-1.5 220 220 0 0 1-29.2-1.9c-14-1.9-16.9-14.4-37.8-23.2a99.2 99.2 0 0 0-37.2-9H11C4 .5.5 19.2.5 56.5s3.5 56 10.5 56h320.5c12.8-1 24.5-3.8 35.2-8.4z" style="fill-rule:evenodd;clip-rule:evenodd"/></svg>
+	</div>
+	<div class="flex justify-start items-center gap-y-5 mt-5 max-lg:flex-col lg:w-full lg:justify-around">
+				<div class="relative text-center before:block before:absolute before:w-px before:h-full before:border-r-2 before:border-dotted before:border-black before:left-1/2 before:bottom-[calc(100%+4px)] max-lg:before:hidden">
+			<p class="text-4xl text-tertiary font-heading">41.1%</p>
+			<p class="text-xs font-bold">Pinot Noir</p>
+		</div>
+				<div class="relative text-center before:block before:absolute before:w-px before:h-full before:border-r-2 before:border-dotted before:border-black before:left-1/2 before:bottom-[calc(100%+4px)] max-lg:before:hidden">
+			<p class="text-4xl text-tertiary font-heading">40.2%</p>
+			<p class="text-xs font-bold">Grenache</p>
+		</div>
+				<div class="relative text-center before:block before:absolute before:w-px before:h-full before:border-r-2 before:border-dotted before:border-black before:left-1/2 before:bottom-[calc(100%+4px)] max-lg:before:hidden">
+			<p class="text-4xl text-tertiary font-heading">18.7%</p>
+			<p class="text-xs font-bold">Other</p>
+		</div>
+			</div>
+</div>
+						<div class="flex flex-wrap w-full justify-start items-start">
+						<div class="ml-4 pl-4 border-l border-solid border-black first:ml-0 first:pl-0 first:border-none sm:ml-8 sm:pl-8">
+				<p class="mb-0 text-xs">TA</p>
+				<p class="text-2xl text-tertiary font-heading sm:text-4xl">.55g/100ml</p>
+			</div>
+						<div class="ml-4 pl-4 border-l border-solid border-black first:ml-0 first:pl-0 first:border-none sm:ml-8 sm:pl-8">
+				<p class="mb-0 text-xs">Alcohol</p>
+				<p class="text-2xl text-tertiary font-heading sm:text-4xl">12.8%</p>
+			</div>
+						<div class="ml-4 pl-4 border-l border-solid border-black first:ml-0 first:pl-0 first:border-none sm:ml-8 sm:pl-8">
+				<p class="mb-0 text-xs">pH</p>
+				<p class="text-2xl text-tertiary font-heading sm:text-4xl">3.32</p>
+			</div>
+						</div>
+						<div class="mt-5">
+				<p class="mb-0 text-xs">Barrel Regimen</p>
+				<p class="text-[1.625rem] text-black font-heading">Portions of the blend were oak-aged for 1 month.</p>
+			</div>
+					</div>
+				<div class="tab-content hidden bg-tan w-full p-8" data-name="appellation">
+																									<figure>
+					<img src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/10/california-appellation-map.png" width="800" height="900" class="mx-auto" />
+					<figcaption class="mt-2 text-center text-sm">California</figcaption>
+				</figure>
+															<p class="mb-0 text-center text-sm">Monterey County</p>
+					</div>
+			</div>
+</div>
+
+	<section class="related products mt-10 mx-auto max-w-screen-xl">
+
+					<h2 class="mb-10 text-4xl text-center font-heading sm:text-6xl">Recommended Products</h2>
+		
+		<ul class="products grid grid-cols-12 gap-x-2.5 !px-5 before:!content-none sm:gap-x-5">
+
+			
+					<li class="wc-related-loop-product !w-full col-span-12 group sm:col-span-6 md:col-span-3 product type-product post-4505 status-publish first instock product_cat-wine has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+	<a href="https://www.francisfordcoppolawinery.com/store/diamond-collection-appellation-series-sonoma-county-sauvignon-blanc/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="300" height="300" src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/CoppolaDiamond_22SB_AppSeries_SonCo_NoNet_RenBottleShot.png?w=300&amp;h=300&amp;crop=1" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" srcset="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/CoppolaDiamond_22SB_AppSeries_SonCo_NoNet_RenBottleShot.png 975w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/CoppolaDiamond_22SB_AppSeries_SonCo_NoNet_RenBottleShot.png?resize=150,150 150w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/CoppolaDiamond_22SB_AppSeries_SonCo_NoNet_RenBottleShot.png?resize=300,300 300w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/CoppolaDiamond_22SB_AppSeries_SonCo_NoNet_RenBottleShot.png?resize=768,768 768w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/CoppolaDiamond_22SB_AppSeries_SonCo_NoNet_RenBottleShot.png?resize=900,900 900w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/CoppolaDiamond_22SB_AppSeries_SonCo_NoNet_RenBottleShot.png?resize=100,100 100w" sizes="(max-width: 300px) 100vw, 300px" />		<div class="absolute top-4 right-4 z-20 text-3xl text-black">
+			<button class="woosw-btn woosw-btn-4505 woosw-btn-has-icon woosw-btn-icon-only" data-id="4505" data-product_name="Diamond Collection Appellation Series Sonoma County Sauvignon Blanc" data-product_image="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/CoppolaDiamond_22SB_AppSeries_SonCo_NoNet_RenBottleShot.png?w=150&amp;h=150&amp;crop=1" aria-label="Add to wishlist"><span class="woosw-btn-icon woosw-icon-5"></span></button>		</div>
+		<h2 class="font-bold woocommerce-loop-product__title">Diamond Collection Appellation Series Sonoma County Sauvignon Blanc</h2>
+
+	<div class="mb-3 text-xs leading-normal">Showing a bright acidity with flavors of stone fruit, apricot, and peach, complemented by scents of grass, lime, and green apple</div>
+
+	<div></div>
+		<p class="mb-8 text-sm text-stone-500 font-bold"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#036;</span>23.00</span></p>
+	</a></a><a href="?add-to-cart=4505" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart wc-add-to-cart z-20 !py-[18px] !px-6 !bg-transparent !text-black !text-sm text-center w-full !rounded-none !border-2 !border-solid !border-black lg:!absolute lg:!left-5 lg:w-[calc(100%-40px)] lg:!bg-white lg:!shadow lg:shadow-black/30 lg:!border-none lg:opacity-0 lg:group-hover:opacity-100" data-product_id="4505" data-product_sku="220983" aria-label="Add &ldquo;Diamond Collection Appellation Series Sonoma County Sauvignon Blanc&rdquo; to your cart" aria-describedby="" rel="nofollow">Add to cart</a>				<div id="myModal" class="modal">
+				</div>
+				</li>
+
+			
+					<li class="wc-related-loop-product !w-full col-span-12 group sm:col-span-6 md:col-span-3 product type-product post-4453 status-publish instock product_cat-wine has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+	<a href="https://www.francisfordcoppolawinery.com/store/francis-coppola-reserve-petite-sirah-dessert-wine-2/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="300" height="300" src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/06/FCReserve_DessertWine_BottleShot-h.png?w=300&amp;h=300&amp;crop=1" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" srcset="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/06/FCReserve_DessertWine_BottleShot-h.png 975w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/06/FCReserve_DessertWine_BottleShot-h.png?resize=150,150 150w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/06/FCReserve_DessertWine_BottleShot-h.png?resize=300,300 300w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/06/FCReserve_DessertWine_BottleShot-h.png?resize=768,768 768w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/06/FCReserve_DessertWine_BottleShot-h.png?resize=900,900 900w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/06/FCReserve_DessertWine_BottleShot-h.png?resize=100,100 100w" sizes="(max-width: 300px) 100vw, 300px" />		<div class="absolute top-4 right-4 z-20 text-3xl text-black">
+			<button class="woosw-btn woosw-btn-4453 woosw-btn-has-icon woosw-btn-icon-only" data-id="4453" data-product_name="Petite Sirah Dessert Wine" data-product_image="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/06/FCReserve_DessertWine_BottleShot-h.png?w=150&amp;h=150&amp;crop=1" aria-label="Add to wishlist"><span class="woosw-btn-icon woosw-icon-5"></span></button>		</div>
+		<h2 class="font-bold woocommerce-loop-product__title">Petite Sirah Dessert Wine</h2>
+
+	<div class="mb-3 text-xs leading-normal">Aromas of kirsch and blackberries mingle with notes of toffee and Asian Five Spice</div>
+
+	<div></div>
+		<p class="mb-8 text-sm text-stone-500 font-bold"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#036;</span>45.00</span></p>
+	</a></a><a href="?add-to-cart=4453" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart wc-add-to-cart z-20 !py-[18px] !px-6 !bg-transparent !text-black !text-sm text-center w-full !rounded-none !border-2 !border-solid !border-black lg:!absolute lg:!left-5 lg:w-[calc(100%-40px)] lg:!bg-white lg:!shadow lg:shadow-black/30 lg:!border-none lg:opacity-0 lg:group-hover:opacity-100" data-product_id="4453" data-product_sku="220636" aria-label="Add &ldquo;Petite Sirah Dessert Wine&rdquo; to your cart" aria-describedby="" rel="nofollow">Add to cart</a>				<div id="myModal" class="modal">
+				</div>
+				</li>
+
+			
+					<li class="wc-related-loop-product !w-full col-span-12 group sm:col-span-6 md:col-span-3 product type-product post-4514 status-publish instock product_cat-wine has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+	<a href="https://www.francisfordcoppolawinery.com/store/diamond-collection-chardonnay-2/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="300" height="300" src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/08/CoppolaDiamond-Chard-h.png?w=300&amp;h=300&amp;crop=1" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/08/CoppolaDiamond-Chard-h.png 975w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/08/CoppolaDiamond-Chard-h.png?resize=150,150 150w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/08/CoppolaDiamond-Chard-h.png?resize=300,300 300w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/08/CoppolaDiamond-Chard-h.png?resize=768,768 768w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/08/CoppolaDiamond-Chard-h.png?resize=900,900 900w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/08/CoppolaDiamond-Chard-h.png?resize=100,100 100w" sizes="(max-width: 300px) 100vw, 300px" />		<div class="absolute top-4 right-4 z-20 text-3xl text-black">
+			<button class="woosw-btn woosw-btn-4514 woosw-btn-has-icon woosw-btn-icon-only" data-id="4514" data-product_name="Diamond Collection Chardonnay" data-product_image="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/08/CoppolaDiamond-Chard-h.png?w=150&amp;h=150&amp;crop=1" aria-label="Add to wishlist"><span class="woosw-btn-icon woosw-icon-5"></span></button>		</div>
+		<h2 class="font-bold woocommerce-loop-product__title">Diamond Collection Chardonnay</h2>
+
+	<div class="mb-3 text-xs leading-normal">Developed concentration and flavors of melon, vanilla and creme brulee- pairs great with grilled chicken or pork chops</div>
+
+	<div></div>
+		<p class="mb-8 text-sm text-stone-500 font-bold"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#036;</span>18.00</span></p>
+	</a></a><a href="?add-to-cart=4514" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart wc-add-to-cart z-20 !py-[18px] !px-6 !bg-transparent !text-black !text-sm text-center w-full !rounded-none !border-2 !border-solid !border-black lg:!absolute lg:!left-5 lg:w-[calc(100%-40px)] lg:!bg-white lg:!shadow lg:shadow-black/30 lg:!border-none lg:opacity-0 lg:group-hover:opacity-100" data-product_id="4514" data-product_sku="220851" aria-label="Add &ldquo;Diamond Collection Chardonnay&rdquo; to your cart" aria-describedby="" rel="nofollow">Add to cart</a>				<div id="myModal" class="modal">
+				</div>
+				</li>
+
+			
+					<li class="wc-related-loop-product !w-full col-span-12 group sm:col-span-6 md:col-span-3 product type-product post-4221 status-publish last instock product_cat-wine has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+	<a href="https://www.francisfordcoppolawinery.com/store/the-family-coppola-94th-awards-chardonnay-2020/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="300" height="300" src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2022/10/aach20-h.png?w=300&amp;h=300&amp;crop=1" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://www.francisfordcoppolawinery.com/wp-content/uploads/2022/10/aach20-h.png 975w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2022/10/aach20-h.png?resize=150,150 150w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2022/10/aach20-h.png?resize=300,300 300w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2022/10/aach20-h.png?resize=768,768 768w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2022/10/aach20-h.png?resize=900,900 900w, https://www.francisfordcoppolawinery.com/wp-content/uploads/2022/10/aach20-h.png?resize=100,100 100w" sizes="(max-width: 300px) 100vw, 300px" />		<div class="absolute top-4 right-4 z-20 text-3xl text-black">
+			<button class="woosw-btn woosw-btn-4221 woosw-btn-has-icon woosw-btn-icon-only" data-id="4221" data-product_name="The Family Coppola 94th Awards Chardonnay" data-product_image="https://www.francisfordcoppolawinery.com/wp-content/uploads/2022/10/aach20-h.png?w=150&amp;h=150&amp;crop=1" aria-label="Add to wishlist"><span class="woosw-btn-icon woosw-icon-5"></span></button>		</div>
+		<h2 class="font-bold woocommerce-loop-product__title">The Family Coppola 94th Awards Chardonnay</h2>
+
+	<div class="mb-3 text-xs leading-normal">With rich, smooth, creamy aromas of juicy pineapple and butterscotch, this wine embraces a buttery, caramel, and ripe yellow fruit style</div>
+
+	<div></div>
+		<p class="mb-8 text-sm text-stone-500 font-bold"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#036;</span>69.00</span></p>
+	</a></a><a href="?add-to-cart=4221" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart wc-add-to-cart z-20 !py-[18px] !px-6 !bg-transparent !text-black !text-sm text-center w-full !rounded-none !border-2 !border-solid !border-black lg:!absolute lg:!left-5 lg:w-[calc(100%-40px)] lg:!bg-white lg:!shadow lg:shadow-black/30 lg:!border-none lg:opacity-0 lg:group-hover:opacity-100" data-product_id="4221" data-product_sku="221468" aria-label="Add &ldquo;The Family Coppola 94th Awards Chardonnay&rdquo; to your cart" aria-describedby="" rel="nofollow">Add to cart</a>				<div id="myModal" class="modal">
+				</div>
+				</li>
+
+			
+		</ul>
+
+	</section>
+	
+<div class="bv-reviews" data-bv-show="reviews" data-bv-product-id="3302"></div>
+		
+	</main></div>
+
+<footer id="footer" class="site-footer no-print flex flex-col gap-10 pb-[1.125rem] bg-black text-white overflow-hidden" data-module="Footer">
+  <div class="flex flex-wrap gap-10 w-full max-w-[1248px] px-4 m-auto">
+    <div class="flex sm:contents lg:flex flex-col lg:flex-row lg:gap-10 lg:flex-grow w-full lg:w-auto" data-name="menus">
+      <nav class="footer-nav" aria-label="Footer Menu Column 1"><ul id="menu-footer-1" class="menu"><li id="menu-item-4628" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4628"><a href="https://www.francisfordcoppolawinery.com/wineries/">Wineries</a>
+<ul class="sub-menu">
+	<li id="menu-item-273" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-273"><a href="/">Francis Ford Coppola Winery</a></li>
+	<li id="menu-item-4626" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4626"><a href="https://www.francisfordcoppolawinery.com/membership/">Memberships</a></li>
+	<li id="menu-item-275" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-275"><a target="_blank" rel="noopener" href="https://www.blackstallionwinery.com/">Black Stallion Winery</a></li>
+	<li id="menu-item-276" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-276"><a target="_blank" rel="noopener" href="https://www.delicato.com/">Delicato Family Wines</a></li>
+</ul>
+</li>
+<li id="menu-item-277" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-277"><a href="#">Food</a>
+<ul class="sub-menu">
+	<li id="menu-item-4627" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4627"><a href="https://www.francisfordcoppolawinery.com/dine-at-the-winery/">Rustic at Francis Ford Coppola Winery</a></li>
+	<li id="menu-item-4629" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4629"><a href="/visit/pools-and-cabines#cafe">Pool Café</a></li>
+	<li id="menu-item-4630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4630"><a href="https://www.francisfordcoppolawinery.com/perfect-your-pizza/">Perfect Your Pizza</a></li>
+</ul>
+</li>
+</ul></nav>
+      <nav class="footer-nav" aria-label="Footer Menu Column 2"><ul id="menu-footer-2" class="menu"><li id="menu-item-290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children current_page_parent menu-item-290"><a href="https://www.francisfordcoppolawinery.com/store/">Shop</a>
+<ul class="sub-menu">
+	<li id="menu-item-4631" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat current-product-ancestor current-menu-parent current-product-parent menu-item-4631"><a href="https://www.francisfordcoppolawinery.com/product-category/wine/">Wine</a></li>
+	<li id="menu-item-4634" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-4634"><a href="https://www.francisfordcoppolawinery.com/product-category/food/">Food</a></li>
+	<li id="menu-item-4632" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-4632"><a href="https://www.francisfordcoppolawinery.com/product-category/gifts/">Gifts</a></li>
+	<li id="menu-item-4633" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-4633"><a href="https://www.francisfordcoppolawinery.com/product-category/tabletop-kitchen/">Tabletop &amp; Kitchen</a></li>
+	<li id="menu-item-4637" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4637"><a href="/store/gift-cards/">Gift Cards</a></li>
+</ul>
+</li>
+</ul></nav>
+      <nav class="footer-nav" aria-label="Footer Menu Column 3"><ul id="menu-footer-3" class="menu"><li id="menu-item-7847" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7847"><a href="/coppolafeast/">Coppola Feast</a></li>
+<li id="menu-item-4641" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4641"><a href="https://www.francisfordcoppolawinery.com/trade-and-media/">Trade And Media</a></li>
+<li id="menu-item-300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-300"><a href="https://www.delicato.com/careers/">Careers</a></li>
+<li id="menu-item-4640" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4640"><a href="https://www.francisfordcoppolawinery.com/store-locator/">Store Locator</a></li>
+<li id="menu-item-4639" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4639"><a href="https://www.francisfordcoppolawinery.com/my-account/">My Account</a></li>
+<li id="menu-item-4638" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4638"><a href="https://www.francisfordcoppolawinery.com/contact-us/">Contact Us</a></li>
+</ul></nav>    </div>
+
+    <div class="w-full sm:w-[44.4444%] lg:pt-6">
+              <a href="/" aria-label="Francis Ford Coppola Winery Home">
+          <img
+            class="max-w-[171px] max-h-[71px] mb-[1.875rem]"
+            src="https://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/ffcw-text.png"
+            alt="Francis Ford Coppola Winery"
+            loading="lazy"
+          >
+        </a>
+      
+      <p class="text-white text-sm font-bold">Email Subscription</p>
+
+      <label class="block mt-3.5 text-white/60 font-semibold text-xs leading-[1.6] lg:tracking-[0.4px]" for="emailaddress">Enter your email to be subscribed to our newsletter for special offers and exclusive discounts.</label>
+
+      <!-- <script type="text/javascript" src="https://snippets.bloyal.io/bLoyalSnippetLoader.js" data-bloyal-login-domain="FFCP"></script> -->
+      <div data-bloyal-snippet-code="FCWMAILSIGNUP" data-bloyal-login-domain="FFCP" data-bloyal-device-code="FCW-SIGNUP2" data-bloyal-snippet-args='{}'></div>
+
+              <ul class="flex gap-6 mt-[1.4375rem] text-xl">
+                      <li>
+              
+              <a href="https://www.facebook.com/coppolawine" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+                <span class="sr-only">facebook</span>
+              </a>
+            </li>
+                      <li>
+              
+              <a href="https://www.twitter.com/coppolawine" target="_blank">
+                <i class="fab fa-twitter"></i>
+                <span class="sr-only">twitter</span>
+              </a>
+            </li>
+                      <li>
+              
+              <a href="https://www.instagram.com/coppolawine" target="_blank">
+                <i class="fab fa-instagram"></i>
+                <span class="sr-only">instagram</span>
+              </a>
+            </li>
+                      <li>
+              
+              <a href="http://www.youtube.com/coppolawine" target="_blank">
+                <i class="fab fa-youtube"></i>
+                <span class="sr-only">youtube</span>
+              </a>
+            </li>
+                      <li>
+              
+              <a href="http://www.yelp.com/biz/francis-ford-coppola-winery-geyserville" target="_blank">
+                <i class="fab fa-yelp"></i>
+                <span class="sr-only">yelp</span>
+              </a>
+            </li>
+                  </ul>
+          </div>
+  </div>
+
+  <div class="flex flex-wrap lg:flex-nowrap gap-5 lg:gap-10 xl:gap-20 px-4 text-white/60 font-semibold">
+          <small class="lg:w-1/2 text-[0.625rem] uppercase">© 2024 Francis Ford Coppola Winery, Geyserville, CA. All rights reserved.</small>
+    
+    <nav class="footer-small-nav contents"><ul id="menu-footer-sub" class="menu"><li id="menu-item-4647" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4647"><a href="https://www.francisfordcoppolawinery.com/store/shipping-and-returns/">Shipping and Returns</a></li>
+<li id="menu-item-12112" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12112"><a href="https://www.delicato.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-4645" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4645"><a href="https://www.francisfordcoppolawinery.com/terms-of-use/">Terms of Use</a></li>
+<li id="menu-item-4642" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4642"><a href="https://www.francisfordcoppolawinery.com/accessibility/">Accessibility</a></li>
+<li id="menu-item-12111" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12111"><a href="https://www.delicato.com/privacy-laws-opt-out-request">Privacy Laws–Opt Out</a></li>
+<li id="menu-item-309" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309"><a href="https://www.delicato.com/privacy-policy/#annex01">CA Notice at Collection</a></li>
+<li id="menu-item-4648" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4648"><a href="https://www.francisfordcoppolawinery.com/ca-transparency-supply-chains/">The California Transparency in Supply Chains Act Compliance Statement</a></li>
+</ul></nav>  </div>
+</footer>
+<div id="wp-cart-focus-anchor" tabindex="-1" aria-label="Press tab to move to the cart"></div>
+  <div class="ageverification-container font-modal" id="AgeVerificationBar" style=" background-color: #ffffff; color:#000000;">
+    <div class="ageverification-wrapper">
+      <div class="content-bg-image">
+        <img class="content-bg-image-desktop" src="" alt="" loading="lazy"/>
+        <img class="content-bg-image-mobile" src="" alt="" loading="lazy"/>
+      </div>
+      <div class="ageverification-content content-area" style=" background-color: #ffffff;">
+        <h2 class="ageverification-logo-wrapper">
+          <img src="" width="300" class="ageverification-brand-logo" loading="lazy"/>
+        </h2>
+        <h3 class="ageverification-copy" style="color:#000000;"><h2 class="ageverification-heading">Privacy</h2>
+<p class="ageverification-text">Your privacy is very important to us. Please review our <a href="/privacy-policy">privacy policy</a> for more information.</p>
+<h2 class="ageverification-heading">Age Verification</h2>
+<p class="ageverification-text">In order to view the requested page you must be at least 21 years of age.</p></h3>
+                  <button type="button" class="ageverification-button  " style=" " data-age-verification>
+            <span style="color:#000000;">I&#039;m at least 21 years of age</span>
+          </button>
+              </div>
+    </div>
+    <p class="ageverification-copyright" style="color:#000000;">&copy; 2024 </p>
+  </div>
+  <div id="woofc-area" class="woofc-area woofc-position-01 woofc-effect-01 woofc-slide-yes woofc-style-02"><div class="woofc-inner woofc-cart-area" data-nonce="515e453ddd"><div class="woofc-area-top"><span class="woofc-area-heading">Shopping cart<span class="woofc-area-count">0</span></span><div class="woofc-close hint--left" aria-label="Close"><i class="woofc-icon-icon10"></i></div></div><!-- woofc-area-top --><div class="woofc-area-mid woofc-items"><div class="woofc-no-item">There are no products in the cart!</div></div><!-- woofc-area-mid --><div class="woofc-area-bot"><div class="woofc-continue"><span class="woofc-continue-url" data-url="https://www.francisfordcoppolawinery.com/store/">Continue shopping</span></div></div><!-- woofc-area-bot --></div></div><div id="woosw_wishlist" class="woosw-popup woosw-popup-center"></div><script>
+	jQuery( function( $ ) {
+		let timeout;
+		$('.woocommerce').on('change', 'input.qty', function(){
+			if ( timeout !== undefined ) {
+				clearTimeout( timeout );
+			}
+			timeout = setTimeout(function() {
+				$("[name='update_cart']").trigger("click"); // trigger cart update
+			}, 1000 ); // 1 second delay, half a second (500) seems comfortable too
+		});
+	} );
+	</script>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="pswp__bg"></div>
+	<div class="pswp__scroll-wrap">
+		<div class="pswp__container">
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+		</div>
+		<div class="pswp__ui pswp__ui--hidden">
+			<div class="pswp__top-bar">
+				<div class="pswp__counter"></div>
+				<button class="pswp__button pswp__button--close" aria-label="Close (Esc)"></button>
+				<button class="pswp__button pswp__button--share" aria-label="Share"></button>
+				<button class="pswp__button pswp__button--fs" aria-label="Toggle fullscreen"></button>
+				<button class="pswp__button pswp__button--zoom" aria-label="Zoom in/out"></button>
+				<div class="pswp__preloader">
+					<div class="pswp__preloader__icn">
+						<div class="pswp__preloader__cut">
+							<div class="pswp__preloader__donut"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+				<div class="pswp__share-tooltip"></div>
+			</div>
+			<button class="pswp__button pswp__button--arrow--left" aria-label="Previous (arrow left)"></button>
+			<button class="pswp__button pswp__button--arrow--right" aria-label="Next (arrow right)"></button>
+			<div class="pswp__caption">
+				<div class="pswp__caption__center"></div>
+			</div>
+		</div>
+	</div>
+</div>
+	<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<link rel='stylesheet' id='woof_sections_style-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/sections/css/sections.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='ion.range-slider-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/ion.range-slider/css/ion.rangeSlider.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof-front-builder-css-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/front_builder/css/front-builder.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof-slideout-tab-css-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/slideout/css/jquery.tabSlideOut.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof-slideout-css-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/slideout/css/slideout.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_tooltip-css-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/tooltip/css/tooltipster.bundle.min.css?ver=3.3.4' media='all' />
+<link rel='stylesheet' id='woof_tooltip-css-noir-css' href='https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/tooltip/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-noir.min.css?ver=3.3.4' media='all' />
+<script type="text/javascript" id="woocommerce-google-analytics-integration-data-js-after">
+/* <![CDATA[ */
+window.ga4w = { data: {"cart":{"items":[],"coupons":[],"totals":{"currency_code":"USD","total_price":0,"currency_minor_unit":2}},"products":[{"id":4505,"name":"Diamond Collection Appellation Series Sonoma County Sauvignon Blanc","categories":[{"name":"Wine"}],"prices":{"price":2300,"currency_minor_unit":2},"extensions":{"woocommerce_google_analytics_integration":{"identifier":"4505"}}},{"id":4453,"name":"Petite Sirah Dessert Wine","categories":[{"name":"Wine"}],"prices":{"price":4500,"currency_minor_unit":2},"extensions":{"woocommerce_google_analytics_integration":{"identifier":"4453"}}},{"id":4514,"name":"Diamond Collection Chardonnay","categories":[{"name":"Wine"}],"prices":{"price":1800,"currency_minor_unit":2},"extensions":{"woocommerce_google_analytics_integration":{"identifier":"4514"}}},{"id":4221,"name":"The Family Coppola 94th Awards Chardonnay","categories":[{"name":"Wine"}],"prices":{"price":6900,"currency_minor_unit":2},"extensions":{"woocommerce_google_analytics_integration":{"identifier":"4221"}}}],"events":["view_item_list","view_item"]}, settings: {"tracker_function_name":"gtag","events":["purchase","add_to_cart","remove_from_cart","view_item_list","select_content","view_item","begin_checkout"],"identifier":null} }; document.dispatchEvent(new Event("ga4w:ready"));
+/* ]]> */
+</script>
+<script type="text/javascript" id="woof_front-js-extra">
+/* <![CDATA[ */
+var woof_filter_titles = {"wine-type":"Types of Wine","varietal":"Varietals","label":"Labels","scent":"Scents","flavor":"Flavors","pairing":"Pairings"};
+var woof_ext_filter_titles = {"woof_author":"By author","backorder":"Exclude On backorder","featured":"Featured products","stock":"In stock","onsales":"On sale","byrating":"By rating","woof_sku":"by SKU","woof_text":"By text"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="woof_front-js-before">
+/* <![CDATA[ */
+        var woof_is_permalink =1;
+        var woof_shop_page = "";
+                var woof_m_b_container =".woocommerce-products-header";
+        var woof_really_curr_tax = {};
+        var woof_current_page_link = location.protocol + '//' + location.host + location.pathname;
+        /*lets remove pagination from woof_current_page_link*/
+        woof_current_page_link = woof_current_page_link.replace(/\page\/[0-9]+/, "");
+                        woof_current_page_link = "https://www.francisfordcoppolawinery.com/store/";
+                        var woof_link = 'https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/';
+        
+        var woof_ajaxurl = "https://www.francisfordcoppolawinery.com/wp-admin/admin-ajax.php";
+
+        var woof_lang = {
+        'orderby': "orderby",
+        'date': "date",
+        'perpage': "per page",
+        'pricerange': "price range",
+        'menu_order': "menu order",
+        'popularity': "popularity",
+        'rating': "rating",
+        'price': "price low to high",
+        'price-desc': "price high to low",
+        'clear_all': "Clear All",
+        'list_opener': "Сhild list opener",
+        };
+
+        if (typeof woof_lang_custom == 'undefined') {
+        var woof_lang_custom = {};/*!!important*/
+        }
+
+        var woof_is_mobile = 0;
+        
+
+
+        var woof_show_price_search_button = 0;
+        var woof_show_price_search_type = 0;
+        
+        var woof_show_price_search_type = 0;
+        var swoof_search_slug = "filter";
+
+        
+        var icheck_skin = {};
+                                icheck_skin.skin = "flat";
+            icheck_skin.color = "yellow";
+        
+        var woof_select_type = 'chosen';
+
+
+                var woof_current_values = '[]';
+                var woof_lang_loading = "Loading ...";
+
+        
+        var woof_lang_show_products_filter = "show products filter";
+        var woof_lang_hide_products_filter = "hide products filter";
+        var woof_lang_pricerange = "price range";
+
+        var woof_use_beauty_scroll =1;
+
+        var woof_autosubmit =0;
+        var woof_ajaxurl = "https://www.francisfordcoppolawinery.com/wp-admin/admin-ajax.php";
+        /*var woof_submit_link = "";*/
+        var woof_is_ajax = 0;
+        var woof_ajax_redraw = 0;
+        var woof_ajax_page_num =1;
+        var woof_ajax_first_done = false;
+        var woof_checkboxes_slide_flag = 1;
+
+
+        /*toggles*/
+        var woof_toggle_type = "image";
+
+        var woof_toggle_closed_text = "+";
+        var woof_toggle_opened_text = "-";
+
+        var woof_toggle_closed_image = "http://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/plus-icon-dark.1e83a552b097.svg?w=150&amp;h=150&amp;crop=1";
+        var woof_toggle_opened_image = "http://www.francisfordcoppolawinery.com/wp-content/uploads/2023/07/minus-icon-dark.d612ea4db0af.svg?w=150&amp;h=150&amp;crop=1";
+
+
+        /*indexes which can be displayed in red buttons panel*/
+                var woof_accept_array = ["min_price", "orderby", "perpage", "woof_author","backorder","featured","stock","onsales","byrating","woof_sku","woof_text","min_rating","appellation","collection","flavor","label","pairing","scent","wine-type","varietal","product_visibility","product_cat","product_tag","pa_size"];
+
+        
+        /*for extensions*/
+
+        var woof_ext_init_functions = null;
+                    woof_ext_init_functions = '{"by_author":"woof_init_author","by_backorder":"woof_init_onbackorder","by_featured":"woof_init_featured","by_instock":"woof_init_instock","by_onsales":"woof_init_onsales","by_sku":"woof_init_sku","by_text":"woof_init_text","color":"woof_init_colors","image":"woof_init_image","label":"woof_init_labels","select_hierarchy":"woof_init_select_hierarchy","select_radio_check":"woof_init_select_radio_check","slider":"woof_init_sliders"}';
+        
+
+        
+        var woof_overlay_skin = "default";
+
+        ;var woof_front_sd_is_a=1;var woof_front_show_notes=0;var woof_lang_front_builder_del="Are you sure you want to delete this filter-section?";var woof_lang_front_builder_options="Options";var woof_lang_front_builder_option="Option";var woof_lang_front_builder_section_options="Section Options";var woof_lang_front_builder_description="Description";var woof_lang_front_builder_close="Close";var woof_lang_front_builder_suggest="Suggest the feature";var woof_lang_front_builder_good_to_use="good to use in content areas";var woof_lang_front_builder_confirm_sd="Smart Designer item will be created and attached to this filter section and will cancel current type, proceed?";var woof_lang_front_builder_creating="Creating";var woof_lang_front_builder_shortcode="Shortcode";var woof_lang_front_builder_layout="Layout";var woof_lang_front_builder_filter_section="Section options";var woof_lang_front_builder_filter_redrawing="filter redrawing";var woof_lang_front_builder_filter_redrawn="redrawn";var woof_lang_front_builder_filter_redrawn="redrawn";var woof_lang_front_builder_title_top_info="this functionality is only visible for the site administrator";var woof_lang_front_builder_title_top_info_demo="demo mode is activated, and results are visible only to you";;var woof_lang_front_builder_select="+ Add filter section";; function woof_js_after_ajax_done() { jQuery(document).trigger('woof_ajax_done'); }
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/front_comprssd.js?ver=3.3.4" id="woof_front-js"></script>
+<script type="text/javascript" id="woof_url_parser-js-extra">
+/* <![CDATA[ */
+var url_parser_data = {"filters":{"by_price":"price","woof_author":"author","by_author":"by_author","by_backorder":"by_backorder","by_featured":"by_featured","by_instock":"by_instock","by_onsales":"by_onsales","min_rating":"min_rating","by_rating":"by_rating","woof_sku":"sku","by_sku":"by_sku","woof_text":"name","by_text":"by_text","wine-type":"wine-type","varietal":"varietal","label":"label","scent":"scent","flavor":"flavor","pairing":"pairing","appellation":"appellation","collection":"collection","product_visibility":"product_visibility","product_cat":"product_cat","product_tag":"product_tag","pa_size":"size","instock":"instock","onsale":"onsale","featured":"featured","backorder_not_in":"backorder_not_in","rev_wine-type":"wine-type","rev_varietal":"varietal","rev_label":"label","rev_scent":"scent","rev_flavor":"flavor","rev_pairing":"pairing","rev_appellation":"appellation","rev_collection":"collection","rev_product_visibility":"product_visibility","rev_product_cat":"product_cat","rev_product_tag":"product_tag","rev_pa_size":"size"},"special":{"stock":"instock","onsales":"onsale","product_visibility":"featured","backorder":"backorder_not_in"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/url_request/js/url_parser.js?ver=3.3.4" id="woof_url_parser-js"></script>
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-H4D8TYL42L" id="google-tag-manager-js" data-wp-strategy="async"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-google-analytics-integration/assets/js/build/main.js?ver=b70e9845eca29be496f0" id="woocommerce-google-analytics-integration-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.7.9.0" id="jquery-blockui-js"></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/www.francisfordcoppolawinery.com\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=7.9.0" id="wc-add-to-cart-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.7.9.0" id="flexslider-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.7.9.0" id="photoswipe-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.7.9.0" id="photoswipe-ui-default-js"></script>
+<script type="text/javascript" id="wc-single-product-js-extra">
+/* <![CDATA[ */
+var wc_single_product_params = {"i18n_required_rating_text":"Please select a rating","review_rating_required":"yes","flexslider":{"rtl":false,"animation":"slide","smoothHeight":true,"directionNav":false,"controlNav":"thumbnails","slideshow":false,"animationSpeed":500,"animationLoop":false,"allowOneSlide":false},"zoom_enabled":"","zoom_options":[],"photoswipe_enabled":"1","photoswipe_options":{"shareEl":false,"closeOnScroll":false,"history":false,"hideAnimationDuration":0,"showAnimationDuration":0},"flexslider_enabled":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=7.9.0" id="wc-single-product-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.7.9.0" id="js-cookie-js"></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=7.9.0" id="woocommerce-js"></script>
+<script type = "text/javascript" data-bloyal-login-domain = "FFCP" src = "https://snippets.bloyal.io/bLoyalSnippetLoader.js?ver=2.0.0"></script><script type="text/javascript" id="woocommerce-multiple-addresses-plugin-script-js-extra">
+/* <![CDATA[ */
+var WCMA_Ajax = {"ajaxurl":"https:\/\/www.francisfordcoppolawinery.com\/wp-admin\/admin-ajax.php","id":"0","wc_multiple_addresses":"c82815e86c"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/bloyal/assets/js/shipping_details.js?ver=1.0.9" id="woocommerce-multiple-addresses-plugin-script-js"></script>
+<script type="text/javascript" id="aws-script-js-extra">
+/* <![CDATA[ */
+var aws_vars = {"sale":"Sale!","sku":"SKU: ","showmore":"View all results","noresults":"Nothing found"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/advanced-woo-search/assets/js/common.min.js?ver=3.08" id="aws-script-js"></script>
+<script type="text/javascript" id="wc-cart-fragments-js-extra">
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_fa683e9928587d90f5921bfa7c6a4c20","fragment_name":"wc_fragments_fa683e9928587d90f5921bfa7c6a4c20","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=7.9.0" id="wc-cart-fragments-js"></script>
+<script type="text/javascript" id="woofc-frontend-js-extra">
+/* <![CDATA[ */
+var woofc_vars = {"ajax_url":"https:\/\/www.francisfordcoppolawinery.com\/wp-admin\/admin-ajax.php","nonce":"515e453ddd","scrollbar":"no","auto_show":"no","auto_show_normal":"no","added_to_cart":"no","delay":"300","undo_remove":"yes","confirm_remove":"no","instant_checkout":"no","instant_checkout_open":"no","confirm_empty":"no","confirm_empty_text":"Do you want to empty the cart?","confirm_remove_text":"Do you want to remove this item?","undo_remove_text":"Undo?","removed_text":"%s was removed.","manual_show":"#wc-cart-button","reload":"no","slick":"yes","slick_params":"{\"slidesToShow\":1,\"slidesToScroll\":1,\"dots\":true,\"arrows\":false,\"autoplay\":false,\"autoplaySpeed\":3000,\"rtl\":false}","is_cart":"","is_checkout":"","cart_url":"","hide_count_empty":"no","wc_checkout_js":"https:\/\/www.francisfordcoppolawinery.com\/wp-content\/plugins\/woocommerce\/assets\/js\/frontend\/checkout.js"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woo-fly-cart/assets/js/frontend.js?ver=5.7.0" id="woofc-frontend-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woo-smart-wishlist/assets/libs/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js?ver=4.8.7" id="perfect-scrollbar-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woo-smart-wishlist/assets/libs/notiny/notiny.js?ver=4.8.7" id="notiny-js"></script>
+<script type="text/javascript" id="woosw-frontend-js-extra">
+/* <![CDATA[ */
+var woosw_vars = {"ajax_url":"https:\/\/www.francisfordcoppolawinery.com\/wp-admin\/admin-ajax.php","nonce":"e4a81a6240","menu_action":"open_page","perfect_scrollbar":"yes","wishlist_url":"https:\/\/www.francisfordcoppolawinery.com\/wishlist\/","button_action":"message","message_position":"right-top","button_action_added":"popup","empty_confirm":"This action cannot be undone. Are you sure?","delete_confirm":"This action cannot be undone. Are you sure?","copied_text":"Copied the wishlist link:","menu_text":"Wishlist","button_text":"Add to wishlist","button_text_added":"Browse wishlist","button_normal_icon":"woosw-icon-5","button_added_icon":"woosw-icon-8","button_loading_icon":"woosw-icon-4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woo-smart-wishlist/assets/js/frontend.js?ver=4.8.7" id="woosw-frontend-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/themes/francis-ford-coppola/js/app.js?ver=0.1.1" id="francis-ford-coppola-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce/assets/js/jquery-payment/jquery.payment.min.js?ver=3.0.0-wc.7.9.0" id="jquery-payment-js"></script>
+<script type="text/javascript" id="sv-wc-payment-gateway-payment-form-v5_10_12-js-extra">
+/* <![CDATA[ */
+var sv_wc_payment_gateway_payment_form_params = {"card_number_missing":"Card number is missing","card_number_invalid":"Card number is invalid","card_number_digits_invalid":"Card number is invalid (only digits allowed)","card_number_length_invalid":"Card number is invalid (wrong length)","cvv_missing":"Card security code is missing","cvv_digits_invalid":"Card security code is invalid (only digits are allowed)","cvv_length_invalid":"Card security code is invalid (must be 3 or 4 digits)","card_exp_date_invalid":"Card expiration date is invalid","check_number_digits_invalid":"Check Number is invalid (only digits are allowed)","check_number_missing":"Check Number is missing","drivers_license_state_missing":"Drivers license state is missing","drivers_license_number_missing":"Drivers license number is missing","drivers_license_number_invalid":"Drivers license number is invalid","account_number_missing":"Account Number is missing","account_number_invalid":"Account Number is invalid (only digits are allowed)","account_number_length_invalid":"Account number is invalid (must be between 5 and 17 digits)","routing_number_missing":"Routing Number is missing","routing_number_digits_invalid":"Routing Number is invalid (only digits are allowed)","routing_number_length_invalid":"Routing number is invalid (must be 9 digits)"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-gateway-usa-epay/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/dist/frontend/sv-wc-payment-gateway-payment-form.js?ver=5.10.12" id="sv-wc-payment-gateway-payment-form-v5_10_12-js"></script>
+<script type="text/javascript" src="https://stats.wp.com/e-202434.js" id="jetpack-stats-js" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="jetpack-stats-js-after">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"220506538\",\"post\":\"4508\",\"tz\":\"-7\",\"srv\":\"www.francisfordcoppolawinery.com\",\"hp\":\"vip\",\"j\":\"1:13.6\"}") ]);
+_stq.push([ "clickTrackerInit", "220506538", "4508" ]);
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/ion.range-slider/js/ion.rangeSlider.min.js?ver=3.3.4" id="ion.range-slider-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/slideout/js/jquery.tabSlideOut.js?ver=3.3.4" id="woof-slideout-js-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/slideout/js/slideout.js?ver=3.3.4" id="woof-slideout-init-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/tooltip/js/tooltipster.bundle.min.js?ver=3.3.4" id="woof_tooltip-js-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/icheck/icheck.min.js?ver=3.3.4" id="icheck-jquery-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_author/js/by_author.js?ver=3.3.4" id="woof_by_author_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_backorder/js/by_backorder.js?ver=3.3.4" id="woof_by_backorder_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_featured/js/by_featured.js?ver=3.3.4" id="woof_by_featured_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_instock/js/by_instock.js?ver=3.3.4" id="woof_by_instock_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_onsales/js/by_onsales.js?ver=3.3.4" id="woof_by_onsales_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_sku/js/by_sku.js?ver=3.3.4" id="woof_by_sku_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/by_text/assets/js/front.js?ver=3.3.4" id="woof_by_text_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/color/js/html_types/color.js?ver=3.3.4" id="woof_color_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/image/js/html_types/image.js?ver=3.3.4" id="woof_image_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/label/js/html_types/label.js?ver=3.3.4" id="woof_label_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/sections/js/sections.js?ver=3.3.4" id="woof_sections_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/select_hierarchy/js/html_types/select_hierarchy.js?ver=3.3.4" id="woof_select_hierarchy_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/select_radio_check/js/html_types/select_radio_check.js?ver=3.3.4" id="woof_select_radio_check_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/slider/js/html_types/slider.js?ver=3.3.4" id="woof_slider_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/js/front.js?ver=3.3.4" id="woof_sd_html_items-js"></script>
+<script type="text/javascript" src="https://www.francisfordcoppolawinery.com/wp-content/plugins/woocommerce-products-filter/js/chosen/chosen.jquery.js?ver=3.3.4" id="chosen-drop-down-js"></script>
+</body>
+</html>
