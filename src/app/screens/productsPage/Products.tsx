@@ -61,7 +61,6 @@ export default function Products( props: ProductsProps) {
       setProductSearch({ ...productSearch });
     }
   }, [searchText]);
-
   /** HANDLERS **/
 
   const searchCollectionHandler = (collection: ProductCollection) => {
@@ -89,15 +88,13 @@ export default function Products( props: ProductsProps) {
   const chooseDishHandler = (id: string) => {
     history.push(`/products/${id}`);
   };
-
-
   return (
     <div className="products">
       <Container>
         <Stack flexDirection={"column"} alignItems={"center"}>
           <Stack className="avatar-big-box">
             <Stack className="top-title">
-              <Box className="top-text">Burak Restaurant</Box>
+              <Box className="top-text">Safia Restaurant</Box>
               <Box className="single-search">
                 <input
                   type={"search"}
@@ -125,7 +122,7 @@ export default function Products( props: ProductsProps) {
           </Stack>
           <Stack className="dishes-filter-section">
             <Button
-              variant={"contained"}
+              variant="contained"
               className="order"
               color={
                 productSearch.order === "createdAt" ? "primary" : "secondary"
@@ -135,7 +132,7 @@ export default function Products( props: ProductsProps) {
               New
             </Button>
             <Button
-              variant={"contained"}
+              variant="contained"
               className="order"
               color={
                 productSearch.order === "productPrice" ? "primary" : "secondary"
@@ -145,7 +142,7 @@ export default function Products( props: ProductsProps) {
               Price
             </Button>
             <Button
-              variant={"contained"}
+              variant="contained"
               className="order"
               color={
                 productSearch.order === "productViews" ? "primary" : "secondary"
@@ -306,16 +303,16 @@ export default function Products( props: ProductsProps) {
         <Box className="brand-text">Our Family Brands</Box>
         <Stack className="brand-cards">
           <Box className="brand-card">
-            <img src="/img/gurme.webp" alt="" />
+            <img src="/img/safia1.jpg" alt="" />
           </Box>
           <Box className="brand-card">
-            <img src="/img/seafood.webp" alt="" />
+            <img src="/img/safia2.jpg" alt="" />
           </Box>
           <Box className="brand-card">
-            <img src="/img/sweets.webp" alt="" />
+            <img src="/img/safia3.jpg" alt="" />
           </Box>
           <Box className="brand-card">
-            <img src="/img/doner.webp" alt="" />
+            <img src="/img/safia4.png" alt="" />
           </Box>
         </Stack>
       </div>

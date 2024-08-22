@@ -87,14 +87,14 @@ class MemberService {
       throw err;
     }
   }
-  public async updateMember(input: MemberUpdateInput): Promise<Member> {
+  public async updateMember(input: MemberUpdateInput): Promise<Member>  {
     try {
-      const formData = new FormData();
-      formData.append("memberNick:", input.memberNick || "");
-      formData.append("memberPhone:", input.memberPhone || "");
-      formData.append("memberAddress:", input.memberAddress || "");
-      formData.append("memberDesc:", input.memberDesc || "");
-      formData.append("memberImage:", input.memberImage || "");
+     const formData = new FormData();
+     formData.append("memberNick", input.memberNick || "");
+     formData.append("memberPhone", input.memberPhone || "");
+     formData.append("memberAddress", input.memberAddress || "");
+     formData.append("memberDesc", input.memberDesc || "");
+     formData.append("memberImage", input.memberImage || "");
 
       const result = await axios(`${serverApi}/member/update`, {
         method: "POST",
@@ -104,17 +104,18 @@ class MemberService {
           "Content-Type": "multipart/form-data",
         },
       });
+
       console.log("updateMember:", result);
-
       const member: Member = result.data;
-      localStorage.setItem("memberData", JSON.stringify(member));
 
+      localStorage.setItem("memberData", JSON.stringify(member));
       return member;
-    } catch (err) {
-      console.log("Error, updateMember:", err);
+    }catch (err) {
+      console.log("Error signup ! ", err);
       throw err;
     }
-  }
+  };
+
 }
 
 export default MemberService;
