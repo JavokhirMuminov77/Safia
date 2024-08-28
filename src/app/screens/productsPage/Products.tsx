@@ -40,7 +40,7 @@ export default function Products( props: ProductsProps) {
     page: 1,
     limit: 8,
     order: "createAt",
-    productCollection: ProductCollection.DRINK,
+    productCollection: ProductCollection.COOKIE,
     search: "",
   });
 

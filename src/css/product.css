@@ -103,8 +103,8 @@
   font-weight: 600;
   font-size: 12px;
   transform: rotate(-90deg);
-  background: #008000;
-  color: #fff;
+  /* background: #008000;
+  color: #fff; */
 }
 .products-page .products .list-category-section .products-wapper {
   width: 100%;

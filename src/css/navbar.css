@@ -33,7 +33,7 @@
   flex-direction: row;
 }
 .home-navbar .navbar-container .menu .links .login-button {
-  background: #3776CC;
+  background: green;
   color:#f8f8ff;
   }
 .home-navbar .navbar-container .menu .user-avatar {
@@ -132,7 +132,7 @@
 width: 210px;
 height: 60px;
 border-radius: 4px;
-background: #1976d2;
+background: green;
 color: #f8f8ff;
 text-align: center;
 font-family: Poppins;
