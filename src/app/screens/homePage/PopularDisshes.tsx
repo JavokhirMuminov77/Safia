@@ -40,7 +40,7 @@ export default function PopularDishes() {
                 return (
                   <CssVarsProvider key={ele._id}>
                     <Card className="card">
-                      <CardCover sx={{mt:"15px"}}>
+                      <CardCover >
                         <img src={imagePath} alt=""  />
                       </CardCover>
                       
@@ -72,7 +72,7 @@ export default function PopularDishes() {
                           gap: 1.5,
                           py: 1.5,
                           px: "var(--Card-padding)",
-                          borderRadius:"50px",
+                          
 
                           // borderTop: "1px solid ",
                           height: "60px",

@@ -1,4 +1,3 @@
-
 import { MemberStatus, MemberType } from "../enums/member.enum";
 
 export interface Member {
@@ -11,10 +10,12 @@ export interface Member {
   memberAddress?: string;
   memberDesc?: string;
   memberImage?: string;
-  memberPoints: number;
+  memberPoints: string;
   createdAt: Date;
   updatedAt: Date;
 }
+
+
 
 export interface MemberInput {
   memberType?: MemberType;
@@ -26,12 +27,14 @@ export interface MemberInput {
   memberDesc?: string;
   memberImage?: string;
   memberPoints?: number;
+
 }
 
 export interface LoginInput {
   memberNick: string;
   memberPassword: string;
 }
+
 
 export interface MemberUpdateInput {
   memberNick?: string;
@@ -40,4 +43,5 @@ export interface MemberUpdateInput {
   memberAddress?: string;
   memberDesc?: string;
   memberImage?: string;
+
 }

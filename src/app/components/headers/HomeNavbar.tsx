@@ -85,6 +85,7 @@ import {
                 </NavLink>
               </Box>
               <Basket
+                
                 cartItems={cartItems}
                 onAdd={onAdd}
                 onRemove={onRemove}

@@ -158,9 +158,9 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
           <Stack
             className={classes.paper}
             direction={"row"}
-            sx={{ width: "800px" }}
+            sx={{ width: "800px", borderRadius:"40px", border:"2px solid green"}}
           >
-            <ModalImg src={"/img/auth.webp"} alt="camera" />
+            <ModalImg src={"/img/login.jpg"} alt="camera" />
             <Stack sx={{ marginLeft: "69px", alignItems: "center" }}>
               <h2>Signup Form</h2>
               <TextField
@@ -185,9 +185,9 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
                 onKeyDown={handlePasswordKeyDown}
               />
               <Fab
-                sx={{ marginTop: "30px", width: "120px" }}
+                sx={{ marginTop: "30px", width: "120px", background:"green", color:"white" }}
                 variant="extended"
-                color="primary"
+                
                 onClick={handleSignupRequest}
               >
                 <LoginIcon sx={{ mr: 1 }} />
@@ -216,7 +216,7 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
             direction={"row"}
             sx={{ width: "700px" }}
           >
-            <ModalImg src={"/img/auth.webp"} alt="camera" />
+            <ModalImg src={"/img/login.jpg"} alt="camera" />
             <Stack
               sx={{
                 marginLeft: "65px",
@@ -242,9 +242,10 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
                 onKeyDown={handlePasswordKeyDown}
               />
               <Fab
-                sx={{ marginTop: "27px", width: "120px" }}
+                sx={{ marginTop: "27px", width: "120px",background:"green", color:"white" }}
                 variant={"extended"}
-                color={"primary"}
+
+                
                 onClick={handleLoginRequest}
               >
                 <LoginIcon sx={{ mr: 1 }} />
