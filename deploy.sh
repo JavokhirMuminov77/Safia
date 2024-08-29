@@ -2,7 +2,7 @@
 
 # PRODUCTION
 git reset --hard
-git checkout master
+git checkout develop
 git pull origin master
 
 npm i yarn -g
